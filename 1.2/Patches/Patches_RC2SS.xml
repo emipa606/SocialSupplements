@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ====== Compatability Patch ==================== -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.0, 1.1] RimCuisine 2 Core</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="SSMushSoup"]/thingCategories</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SSMushSoup"]/thingCategories</xpath>
+            <value>
+              <thingCategories Inherit="false">
+                <li>RC2_FoodMealsJoy</li>
+              </thingCategories>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSMushSoup"]</xpath>
+            <value>
+              <thingCategories Inherit="false">
+                <li>RC2_FoodMealsJoy</li>
+              </thingCategories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawTruffles</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawTruffles</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawTruffles</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawTruffles</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawTruffles</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawTruffles</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawTruffles</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawTruffles</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[defName="MakeSSHotSauce" or defName="MakeBulkSSHotSauce"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <value>
+            <li>RC2_RawPeppers</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSHotSauce" or defName="MakeBulkSSHotSauce"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>RC2_RawPeppers</li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawQuinoa</li>
+              <li>RC2_RawBarley</li>
+              <li>RC2_RawSorghum</li>
+              <li>RC2_RawSugarBeets</li>
+              <li>RC2_RawWheat</li>
+              <li>RC2_RawSugarcane</li>
+              <li>RC2_Sugar</li>
+              <li>RC2_AgaveNectar</li>
+              <li>RC2_Honey</li>
+              <li>RC2_Syrup</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawQuinoa</li>
+                <li>RC2_RawBarley</li>
+                <li>RC2_RawSorghum</li>
+                <li>RC2_RawSugarBeets</li>
+                <li>RC2_RawWheat</li>
+                <li>RC2_RawSugarcane</li>
+                <li>RC2_Sugar</li>
+                <li>RC2_AgaveNectar</li>
+                <li>RC2_Honey</li>
+                <li>RC2_Syrup</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>RC2_RawQuinoa</li>
+              <li>RC2_RawBarley</li>
+              <li>RC2_RawSorghum</li>
+              <li>RC2_RawSugarBeets</li>
+              <li>RC2_RawWheat</li>
+              <li>RC2_RawSugarcane</li>
+              <li>RC2_Sugar</li>
+              <li>RC2_AgaveNectar</li>
+              <li>RC2_Honey</li>
+              <li>RC2_Syrup</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>RC2_RawQuinoa</li>
+                <li>RC2_RawBarley</li>
+                <li>RC2_RawSorghum</li>
+                <li>RC2_RawSugarBeets</li>
+                <li>RC2_RawWheat</li>
+                <li>RC2_RawSugarcane</li>
+                <li>RC2_Sugar</li>
+                <li>RC2_AgaveNectar</li>
+                <li>RC2_Honey</li>
+                <li>RC2_Syrup</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="SSGlucose"]/thingCategories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSGlucose"]/thingCategories</xpath>
+            <value>
+              <li>RC2_SweetsProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSGlucose"]</xpath>
+            <value>
+              <thingCategories>
+                <li>RC2_SweetsProcessed</li>
+              </thingCategories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>RC2_SweetsRaw</li>
+              <li>RC2_SweetsProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_SweetsRaw</li>
+                <li>RC2_SweetsProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_SweetsRaw</li>
+              <li>RC2_SweetsProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSAnimalTreats"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_SweetsRaw</li>
+                <li>RC2_SweetsProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>RC2_SweetsRaw</li>
+              <li>RC2_SweetsProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_SweetsRaw</li>
+                <li>RC2_SweetsProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_SweetsRaw</li>
+              <li>RC2_SweetsProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_SweetsRaw</li>
+                <li>RC2_SweetsProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+              <li>RC2_FruitProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+                <li>RC2_FruitProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>RC2_FruitsRaw</li>
+              <li>RC2_FruitProcessed</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>RC2_FruitsRaw</li>
+                <li>RC2_FruitProcessed</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Spicy Meals -->
+
+  <SSMealSurvivalPackSpicy.label>spicy packaged survival meal</SSMealSurvivalPackSpicy.label>
+  <SSMealSurvivalPackSpicy.description>A high-quality packaged meal combined with hot sauce, manufactured for use in survival situations. While it never rots, it can still deteriorate if left outside. Great for traveling.</SSMealSurvivalPackSpicy.description>
+
+  <SSMealTravelPackSpicy.label>spicy packaged travel meal</SSMealTravelPackSpicy.label>
+  <SSMealTravelPackSpicy.description>A deluxe-quality packaged meal combined with hot sauce, manufactured for use while traveling. While it never rots, it can still deteriorate if left outside. Ideal for traveling.</SSMealTravelPackSpicy.description>
+
+  <SSMealSimpleSpicy.label>spicy simple meal</SSMealSimpleSpicy.label>
+  <SSMealSimpleSpicy.description>A simple meal quickly cooked from one main ingredient and combined with hot sauce.</SSMealSimpleSpicy.description>
+
+  <SSMealFineSpicy.label>spicy fine meal</SSMealFineSpicy.label>
+  <SSMealFineSpicy.description>A complex dish assembled with care from a variety of ingredients and combined with hot sauce.</SSMealFineSpicy.description>
+
+  <SSMealLavishSpicy.label>spicy lavish meal</SSMealLavishSpicy.label>
+  <SSMealLavishSpicy.description>A masterpiece of the culinary arts, this spicy meal flavoured with hot sauce nourishes the body, mind, and soul.</SSMealLavishSpicy.description>
+
+
+  <!-- Spicy Pemmican -->
+
+  <SSPemmicanSpicy.label>spicy pemmican</SSPemmicanSpicy.label>
+  <SSPemmicanSpicy.description>A preserved mashed mixture of fat and plant food combined with hot sauce. Tastes bland, but not offensive and has a bit of a heat kick. It lasts a very long time without refrigeration. Great for traveling.</SSPemmicanSpicy.description>
+
+
+</LanguageData>

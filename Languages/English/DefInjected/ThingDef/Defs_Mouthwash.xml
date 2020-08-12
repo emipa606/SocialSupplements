@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mouthwash -->
+
+  <SSMouthWash.label>Mouthwash</SSMouthWash.label>
+  <SSMouthWash.description>A menthol base anti-bacterial liquid. Can be used for oral health and to freshen breath. Effects last for about half a day.</SSMouthWash.description>
+  <SSMouthWash.ingestible.ingestCommandString>Drink {0}</SSMouthWash.ingestible.ingestCommandString>
+  <SSMouthWash.ingestible.ingestReportString>Drinking {0}.</SSMouthWash.ingestible.ingestReportString>
+
+
+</LanguageData>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================== Polyflower  ==================================== -->
+  <!-- === Plant === -->
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_SSPolyflower</defName>
+    <label>Polyflower</label>
+    <description>A genetically modified flower that gives off numerous different scents. It was designed in this way to ensure that a pleasurable response can be had despite olfactory preferences.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Nutrition>0.05</Nutrition>
+      <Beauty>12</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>15</pathCost>
+    <graphicData>
+      <texPath>Things/Plant/SSPolyflower</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.65</fertilitySensitivity>
+      <growDays>5</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SSPolyPetals</harvestedThingDef>
+      <harvestYield>5</harvestYield>
+      <sowMinSkill>7</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+        <li>Decorative</li>
+      </sowTags>
+      <harvestWork>75</harvestWork>
+      <visualSizeRange Inherit="false">
+        <min>0.4</min>
+        <max>0.90</max>
+      </visualSizeRange>
+      <topWindExposure>0.2</topWindExposure>
+      <wildOrder>2</wildOrder>
+      <purpose>Beauty</purpose>
+      <sowResearchPrerequisites>
+        <li>SSPolyflower</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+  <!-- === Petals === -->
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>SSPolyPetals</defName>
+    <label>Polyflower petals</label>
+    <description>Picked petals of the polyflower. These petals can be used for various aromatic purposes.</description>
+    <graphicData>
+      <texPath>Things/Item/SSPolyPetals/SSPolyPetals</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Flammability>1.0</Flammability>
+      <Nutrition>0.02</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.04</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>18</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Research -->
+  <ResearchProjectDef>
+    <defName>SSPolyflower</defName>
+    <label>Polyflower</label>
+    <description>Grants the ability to plant the polyflower.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MSPhenol</li>
+    </prerequisites>
+    <tab>SocialSuppTab</tab>
+  </ResearchProjectDef>
+  <!-- ====================== Polyflower Juice ================== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>SSPolyflowerJuice</defName>
+    <label>Polyflower Juice</label>
+    <description>A sweet tonic made from polyflowers and glycerol. It helps fulfils the need for recreation.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSPolyflowerJuice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>32</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed, Fluid</foodType>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <joy>0.33</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestSound>Ingest_Drink</ingestSound>
+    </ingestible>
+  </ThingDef>
+  <!-- ==== Recipes ==== -->
+  <RecipeDef>
+    <defName>MakeSSPolyflowerJuice</defName>
+    <label>Make Polyflower juice</label>
+    <description>Prepare polyflower juice.</description>
+    <jobString>Preparing polyflower juice.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSPolyPetals</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSPolyPetals</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSPolyflowerJuice>1</SSPolyflowerJuice>
+    </products>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>11</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SSPolyflower</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSPolyflowerJuice</defName>
+    <label>Make Polyflower juice in bulk</label>
+    <description>Prepare 5 polyflower juice.</description>
+    <jobString>Preparing polyflower juice.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>2000</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSPolyPetals</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSPolyPetals</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSPolyflowerJuice>5</SSPolyflowerJuice>
+    </products>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>12</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SSPolyflower</researchPrerequisite>
+  </RecipeDef>
+</Defs>

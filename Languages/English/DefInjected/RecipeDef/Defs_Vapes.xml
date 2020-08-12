@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Regular -->
+
+  <MakeSSVape_Regular.label>Make Vape (Regular)</MakeSSVape_Regular.label>
+  <MakeSSVape_Regular.description>Make 1 Smokeleaf Vape (Regular).</MakeSSVape_Regular.description>
+  <MakeSSVape_Regular.jobString>Making Smokeleaf Vape.</MakeSSVape_Regular.jobString>
+
+
+  <!-- Bulk -->
+
+  <MakeBulkSSVape_Regular.label>Make Vape (Regular) in bulk</MakeBulkSSVape_Regular.label>
+  <MakeBulkSSVape_Regular.description>Make 5 Smokeleaf Vapes (Regular).</MakeBulkSSVape_Regular.description>
+  <MakeBulkSSVape_Regular.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Regular.jobString>
+
+
+  <!-- Recipes -->
+
+  <MakeSSVape_Fruity.label>Make Vape (Fruity)</MakeSSVape_Fruity.label>
+  <MakeSSVape_Fruity.description>Make Smokeleaf Vape (Fruity).</MakeSSVape_Fruity.description>
+  <MakeSSVape_Fruity.jobString>Making Smokeleaf Vape.</MakeSSVape_Fruity.jobString>
+
+  <MakeBulkSSVape_Fruity.label>Make Vape (Fruity) in bulk</MakeBulkSSVape_Fruity.label>
+  <MakeBulkSSVape_Fruity.description>Make 5 Smokeleaf Vapes (Fruity).</MakeBulkSSVape_Fruity.description>
+  <MakeBulkSSVape_Fruity.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Fruity.jobString>
+
+
+  <!-- Menthol -->
+
+  <MakeSSVape_Menthol.label>Make Vape (Menthol)</MakeSSVape_Menthol.label>
+  <MakeSSVape_Menthol.description>Make 1 Smokeleaf Vape (Menthol).</MakeSSVape_Menthol.description>
+  <MakeSSVape_Menthol.jobString>Making Smokeleaf Vape.</MakeSSVape_Menthol.jobString>
+
+
+  <!-- Bulk -->
+
+  <MakeBulkSSVape_Menthol.label>Make Vape (Menthol) in bulk</MakeBulkSSVape_Menthol.label>
+  <MakeBulkSSVape_Menthol.description>Make 5 Smokeleaf Vapes (Menthol).</MakeBulkSSVape_Menthol.description>
+  <MakeBulkSSVape_Menthol.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Menthol.jobString>
+
+
+</LanguageData>

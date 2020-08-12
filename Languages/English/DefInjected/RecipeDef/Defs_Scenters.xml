@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipes -->
+
+  <MakeSSScenterNeutral.label>Make Scenters (Neutral)</MakeSSScenterNeutral.label>
+  <MakeSSScenterNeutral.description>Make 2 Scenters (Neutral).</MakeSSScenterNeutral.description>
+  <MakeSSScenterNeutral.jobString>Making Scenters.</MakeSSScenterNeutral.jobString>
+
+  <MakeBulkSSScenterNeutral.label>Make Scenters (Neutral) in bulk</MakeBulkSSScenterNeutral.label>
+  <MakeBulkSSScenterNeutral.description>Make 10 Scenters (Neutral).</MakeBulkSSScenterNeutral.description>
+  <MakeBulkSSScenterNeutral.jobString>Making Scenters.</MakeBulkSSScenterNeutral.jobString>
+
+
+</LanguageData>

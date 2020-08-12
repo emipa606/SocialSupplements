@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ThoughtDef -->
+  <ThoughtDef>
+    <defName>SSScent</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>SSScent.ThoughtWorker_SSScenter</workerClass>
+    <!-- Custom -->
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>appealing smell</label>
+        <baseOpinionOffset>8</baseOpinionOffset>
+      </li>
+      <li>
+        <label>attractive smell</label>
+        <baseOpinionOffset>16</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Research -->
+  <ResearchProjectDef>
+    <defName>SSScenters</defName>
+    <label>Scenters</label>
+    <description>Grants the ability to make Scenters.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SSPolyflower</li>
+    </prerequisites>
+    <tab>SocialSuppTab</tab>
+  </ResearchProjectDef>
+  <!-- =========== Scenters ==================== -->
+  <!-- Neutral -->
+  <ThingDef ParentName="DrugBase">
+    <defName>SSScenterNeutral</defName>
+    <label>Scenter (Universal)</label>
+    <description>An appealing smelling scent suitable for all. Will increase the opinion others have of you.</description>
+    <graphicData>
+      <texPath>Things/Item/SSScenterNeutral</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MarketValue>8</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <ingestCommandString>Apply {0}</ingestCommandString>
+      <ingestReportString>Applying {0}.</ingestReportString>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedSSScentNeutral</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1701</listOrder>
+        <overdoseSeverityOffset>
+          <min>0.01</min>
+          <max>0.03</max>
+        </overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>HedSSScentNeutral</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Neutral Scent</label>
+    <description>Neutral scent effect</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <SocialImpact>+0.03</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <!-- ===== Recipes ========= -->
+  <RecipeDef>
+    <defName>MakeSSScenterNeutral</defName>
+    <label>Make Scenters (Neutral)</label>
+    <description>Make 2 Scenters (Neutral).</description>
+    <jobString>Making Scenters.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>200</workAmount>
+    <targetCountAdjustment>2</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSPolyPetals</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSPhenol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSPolyPetals</li>
+        <li>MSPhenol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSScenterNeutral>2</SSScenterNeutral>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>7</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSScenters</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSScenterNeutral</defName>
+    <label>Make Scenters (Neutral) in bulk</label>
+    <description>Make 10 Scenters (Neutral).</description>
+    <jobString>Making Scenters.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>10</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSPolyPetals</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSPhenol</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSPolyPetals</li>
+        <li>MSPhenol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSScenterNeutral>10</SSScenterNeutral>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>8</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSScenters</researchPrerequisite>
+  </RecipeDef>
+  <!-- Attract Male -->
+  <!-- Problem with C# code to recognise genders and/or associated sexual orientations -->
+  <!--
+	<ThingDef ParentName="DrugBase">
+    		<defName>SSScenterMale</defName>
+    		<label>Scenter (Male)</label>
+    		<description>A subtle smelling scent to improve appeal. This scent is specifically designed to attract the male of the species.</description>
+    		<graphicData>
+      		<texPath>Things/Item/SSScenterMale</texPath>
+      		<graphicClass>Graphic_StackCount</graphicClass>
+    		</graphicData>
+    		<socialPropernessMatters>false</socialPropernessMatters>
+    		<rotatable>false</rotatable>
+    		<statBases>
+      		<WorkToMake>200</WorkToMake>
+      		<MarketValue>31.5</MarketValue>
+      		<Mass>0.05</Mass>
+    		</statBases>
+    		<techLevel>Industrial</techLevel>
+    		<ingestible>
+      		<drugCategory>Medical</drugCategory>
+	  		<foodType>Processed, Fluid</foodType>
+      	<ingestHoldOffsetStanding>
+        		<northDefault>
+        			<offset>(0.18,0,0)</offset>
+        		</northDefault>
+      	</ingestHoldOffsetStanding>
+      	<outcomeDoers>
+        		<li Class="IngestionOutcomeDoer_GiveHediff">
+          		<hediffDef>HedSSScentMale</hediffDef>
+          		<severity>1.0</severity>
+        		</li>
+      	</outcomeDoers>
+    		</ingestible>	
+    		<comps>
+      		<li Class="CompProperties_Drug">
+        			<listOrder>1702</listOrder>
+        			<overdoseSeverityOffset>
+          			<min>0.01</min>
+          			<max>0.03</max>
+        			</overdoseSeverityOffset>
+      		</li>
+    		</comps>
+  </ThingDef>
+  
+  <HediffDef>
+  	<defName>HedSSScentMale</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Male attracting Scent</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+    		<li Class="HediffCompProperties_SeverityPerDay">
+        		<severityPerDay>-0.95</severityPerDay>
+      	</li>
+    </comps>
+	<stages>
+		<li>
+			<statOffsets>
+				<SocialImpact>+0.02</SocialImpact>
+			</statOffsets>
+		</li>
+     </stages>
+  </HediffDef>
+  -->
+  <!-- ===== Recipes ========= -->
+  <!--
+      <RecipeDef>
+		<defName>MakeSSScenterMale</defName>
+		<label>Make Scenter (Male)</label>
+		<description>Make Scenter (Male).</description>
+		<jobString>Making Scenter.</jobString>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>200</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<workSkill>Intellectual</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SSPolyPetals</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSPhenol</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSGlycerol</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SSPolyPetals</li>
+				<li>MSPhenol</li>
+				<li>MSGlycerol</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SSScenterMale>1</SSScenterMale>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+      	<skillRequirements>
+            		<Intellectual>8</Intellectual>
+      	</skillRequirements>
+		<researchPrerequisite>SSScenters</researchPrerequisite>
+	</RecipeDef>
+  
+    <RecipeDef>
+		<defName>MakeBulkSSScenterMale</defName>
+		<label>Make Scenters (Male) in bulk</label>
+		<description>Make 5 Scenters (Male).</description>
+		<jobString>Making Scenters.</jobString>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>5</targetCountAdjustment>
+		<workSkill>Intellectual</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SSPolyPetals</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSPhenol</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSGlycerol</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SSPolyPetals</li>
+				<li>MSPhenol</li>
+				<li>MSGlycerol</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SSScenterMale>5</SSScenterMale>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+      	<skillRequirements>
+            		<Intellectual>9</Intellectual>
+      	</skillRequirements>
+		<researchPrerequisite>SSScenters</researchPrerequisite>
+	</RecipeDef>
+	-->
+  <!-- Attract Female -->
+  <!--
+	<ThingDef ParentName="DrugBase">
+    		<defName>SSScenterFemale</defName>
+    		<label>Scenter (Female)</label>
+    		<description>A subtle smelling scent to improve appeal. This scent is specifically designed to attract the female of the species.</description>
+    		<graphicData>
+      		<texPath>Things/Item/SSScenterFemale</texPath>
+      		<graphicClass>Graphic_StackCount</graphicClass>
+    		</graphicData>
+    		<socialPropernessMatters>false</socialPropernessMatters>
+    		<rotatable>false</rotatable>
+    		<statBases>
+      		<WorkToMake>200</WorkToMake>
+      		<MarketValue>31.5</MarketValue>
+      		<Mass>0.05</Mass>
+    		</statBases>
+    		<techLevel>Industrial</techLevel>
+    		<ingestible>
+      		<drugCategory>Medical</drugCategory>
+	  		<foodType>Processed, Fluid</foodType>
+      	<ingestHoldOffsetStanding>
+        		<northDefault>
+        			<offset>(0.18,0,0)</offset>
+        		</northDefault>
+      	</ingestHoldOffsetStanding>
+      	<outcomeDoers>
+        		<li Class="IngestionOutcomeDoer_GiveHediff">
+          		<hediffDef>HedSSScentFemale</hediffDef>
+          		<severity>1.0</severity>
+        		</li>
+      	</outcomeDoers>
+    		</ingestible>	
+    		<comps>
+      		<li Class="CompProperties_Drug">
+        			<listOrder>1703</listOrder>
+        			<overdoseSeverityOffset>
+          			<min>0.01</min>
+          			<max>0.03</max>
+        			</overdoseSeverityOffset>
+      		</li>
+    		</comps>
+  </ThingDef>
+  
+  <HediffDef>
+  	<defName>HedSSScentFemale</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Female attracting Scent</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+    		<li Class="HediffCompProperties_SeverityPerDay">
+        		<severityPerDay>-0.95</severityPerDay>
+      	</li>
+    </comps>
+	<stages>
+		<li>
+			<statOffsets>
+				<SocialImpact>+0.02</SocialImpact>
+			</statOffsets>
+		</li>
+     </stages>
+  </HediffDef>
+  -->
+  <!-- ===== Recipes ========= -->
+  <!--
+      <RecipeDef>
+		<defName>MakeSSScenterFemale</defName>
+		<label>Make Scenter (Female)</label>
+		<description>Make Scenter (Female).</description>
+		<jobString>Making Scenter.</jobString>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>200</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<workSkill>Intellectual</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SSPolyPetals</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSPhenol</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSGlycerol</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SSPolyPetals</li>
+				<li>MSPhenol</li>
+				<li>MSGlycerol</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SSScenterFemale>1</SSScenterFemale>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+      	<skillRequirements>
+            		<Intellectual>8</Intellectual>
+      	</skillRequirements>
+		<researchPrerequisite>SSScenters</researchPrerequisite>
+	</RecipeDef>
+  
+    <RecipeDef>
+		<defName>MakeBulkSSScenterFemale</defName>
+		<label>Make Scenters (Female) in bulk</label>
+		<description>Make 5 Scenters (Female).</description>
+		<jobString>Making Scenters.</jobString>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>5</targetCountAdjustment>
+		<workSkill>Intellectual</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SSPolyPetals</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSPhenol</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSGlycerol</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SSPolyPetals</li>
+				<li>MSPhenol</li>
+				<li>MSGlycerol</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SSScenterFemale>5</SSScenterFemale>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+      	<skillRequirements>
+            		<Intellectual>9</Intellectual>
+      	</skillRequirements>
+		<researchPrerequisite>SSScenters</researchPrerequisite>
+	</RecipeDef>
+	-->
+</Defs>

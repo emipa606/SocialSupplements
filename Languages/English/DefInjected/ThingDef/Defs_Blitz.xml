@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Zest -->
+
+  <SSBlitz_Zest.label>Blitz (Zest)</SSBlitz_Zest.label>
+  <SSBlitz_Zest.description>A psychoid infused and highly sweetened drink. This drink has a fruit flavouring. Active for about half a day.</SSBlitz_Zest.description>
+  <SSBlitz_Zest.ingestible.ingestCommandString>Drink {0}</SSBlitz_Zest.ingestible.ingestCommandString>
+  <SSBlitz_Zest.ingestible.ingestReportString>Drinking {0}.</SSBlitz_Zest.ingestible.ingestReportString>
+
+
+  <!-- Ice -->
+
+  <SSBlitz_Ice.label>Blitz (Ice)</SSBlitz_Ice.label>
+  <SSBlitz_Ice.description>A psychoid infused and highly sweetened drink. This drink has a mint flavouring. Active for about half a day.</SSBlitz_Ice.description>
+  <SSBlitz_Ice.ingestible.ingestCommandString>Drink {0}</SSBlitz_Ice.ingestible.ingestCommandString>
+  <SSBlitz_Ice.ingestible.ingestReportString>Drinking {0}.</SSBlitz_Ice.ingestible.ingestReportString>
+
+
+</LanguageData>

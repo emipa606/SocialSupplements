@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ====== Compatability Patch ==================== -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Vegetable Garden</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeSSBlitz_Zest"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="MakeBulkSSBlitz_Zest"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVape_Fruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/ingredients/li[4]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSVaperRefillFruity"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="SSMushSoup"]/thingCategories</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SSMushSoup"]/thingCategories</xpath>
+            <value>
+              <thingCategories Inherit="false">
+                <li>SimpleMeals</li>
+              </thingCategories>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSMushSoup"]</xpath>
+            <value>
+              <thingCategories Inherit="false">
+                <li>SimpleMeals</li>
+              </thingCategories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+            <value>
+              <li>Rawmushroom</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/ingredients/li[1]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawmushroom</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>Rawmushroom</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookSSMushSoup"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawmushroom</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter/thingDefs</xpath>
+            <value>
+              <li>Rawmushroom</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/ingredients/li[1]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawmushroom</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>Rawmushroom</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookBulkSSMushSoup"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawmushroom</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+            <value>
+              <li>Rawsnowbeet</li>
+              <li>RawBarley</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawsnowbeet</li>
+                <li>RawBarley</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>Rawsnowbeet</li>
+              <li>RawBarley</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>Rawsnowbeet</li>
+                <li>RawBarley</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="SSGlucose"]/thingCategories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSGlucose"]/thingCategories</xpath>
+            <value>
+              <li>CookingSupplies</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SSGlucose"]</xpath>
+            <value>
+              <thingCategories>
+                <li>CookingSupplies</li>
+              </thingCategories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/ingredients/li[5]/filter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>FruitFoodRaw</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSPowerBar" or defName="MakeBulkSSPowerBar"]/fixedIngredientFilter</xpath>
+            <value>
+              <categories>
+                <li>FruitFoodRaw</li>
+              </categories>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Bulk Vanilla Hard social drugs -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Medicine</li>
+    </mods>
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkGoJuice</defName>
+              <label>make go-juice in bulk</label>
+              <description>Make 5 bulk go-juice.</description>
+              <jobString>Crafting go-juice.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Intellectual</workSkill>
+              <workAmount>2500</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Neutroamine</li>
+                    </thingDefs>
+                  </filter>
+                  <count>10</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Yayo</li>
+                    </thingDefs>
+                  </filter>
+                  <count>5</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>Neutroamine</li>
+                  <li>Yayo</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <GoJuice>5</GoJuice>
+              </products>
+              <skillRequirements>
+                <Intellectual>5</Intellectual>
+              </skillRequirements>
+              <recipeUsers>
+                <li>DrugLab</li>
+              </recipeUsers>
+              <researchPrerequisite>GoJuiceProduction</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkFlake</defName>
+              <label>make flake in bulk</label>
+              <description>Make 5 flake.</description>
+              <jobString>Crafting flake.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Intellectual</workSkill>
+              <workAmount>2500</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>PsychoidLeaves</li>
+                    </thingDefs>
+                  </filter>
+                  <count>20</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>PsychoidLeaves</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Flake>5</Flake>
+              </products>
+              <skillRequirements>
+                <Intellectual>5</Intellectual>
+              </skillRequirements>
+              <recipeUsers>
+                <li>DrugLab</li>
+              </recipeUsers>
+              <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkYayo</defName>
+              <label>make yayo in bulk</label>
+              <description>Make 5 yayo.</description>
+              <jobString>Crafting yayo.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Intellectual</workSkill>
+              <workAmount>3000</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>PsychoidLeaves</li>
+                    </thingDefs>
+                  </filter>
+                  <count>40</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>PsychoidLeaves</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Yayo>5</Yayo>
+              </products>
+              <skillRequirements>
+                <Intellectual>5</Intellectual>
+              </skillRequirements>
+              <recipeUsers>
+                <li>DrugLab</li>
+              </recipeUsers>
+              <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkWakeUp</defName>
+              <label>make wakeUp in bulk</label>
+              <description>Make 5 wake-up.</description>
+              <jobString>Crafting wake-up.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Intellectual</workSkill>
+              <workAmount>3500</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Neutroamine</li>
+                    </thingDefs>
+                  </filter>
+                  <count>10</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>Neutroamine</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <WakeUp>5</WakeUp>
+              </products>
+              <skillRequirements>
+                <Intellectual>5</Intellectual>
+              </skillRequirements>
+              <recipeUsers>
+                <li>DrugLab</li>
+              </recipeUsers>
+              <researchPrerequisite>WakeUpProduction</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkSmokeleafJoint</defName>
+              <label>make smokeleaf joints in bulk</label>
+              <description>Make 5 smokeleaf joints.</description>
+              <jobString>Crafting smokeleaf joints.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Intellectual</workSkill>
+              <workAmount>2000</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SmokeleafLeaves</li>
+                    </thingDefs>
+                  </filter>
+                  <count>20</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SmokeleafLeaves</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <SmokeleafJoint>5</SmokeleafJoint>
+              </products>
+              <recipeUsers>
+                <li>CraftingSpot</li>
+                <li>DrugLab</li>
+              </recipeUsers>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>SSBulkPekoe</defName>
+              <label>make pekoe tea in bulk</label>
+              <description>Make 5 pekoe tea.</description>
+              <jobString>Crafting pekoe.</jobString>
+              <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workSkill>Cooking</workSkill>
+              <workAmount>2000</workAmount>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>PsychoidLeaves</li>
+                    </thingDefs>
+                  </filter>
+                  <count>20</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>PsychoidLeaves</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <PsychiteTea>5</PsychiteTea>
+              </products>
+              <recipeUsers>
+                <li>DrugLab</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+              </recipeUsers>
+              <researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </nomatch>
+  </Operation>
+</Patch>

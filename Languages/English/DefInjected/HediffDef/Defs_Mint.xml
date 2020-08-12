@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mint Tea -->
+
+  <SSMintTea_High.label>Refreshed by mint tea</SSMintTea_High.label>
+  <SSMintTea_High.description>Mint tea effect</SSMintTea_High.description>
+  <SSMintTea_High.labelNoun>a mint tea effect</SSMintTea_High.labelNoun>
+
+
+  <!-- Candy Cane -->
+
+  <SSSugarRush.label>Sugar rush</SSSugarRush.label>
+  <SSSugarRush.description>Sugar rush effect</SSSugarRush.description>
+
+
+</LanguageData>

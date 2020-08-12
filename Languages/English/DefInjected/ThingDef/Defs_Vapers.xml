@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Empty -->
+
+  <SSVaperEmpty.label>Vaper (Empty)</SSVaperEmpty.label>
+  <SSVaperEmpty.description>Device to allow vaping of smokeleaf with a number of uses, though this is item is empty. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</SSVaperEmpty.description>
+
+
+  <!-- Regular -->
+
+  <SSVaperRegular.label>Vaper (Regular)</SSVaperRegular.label>
+  <SSVaperRegular.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</SSVaperRegular.description>
+  <SSVaperRegular.comps.1.useLabel>Use Vaper (Regular)</SSVaperRegular.comps.1.useLabel>
+
+  <SSVaperRefillRegular.label>Vaper Refill (Regular)</SSVaperRefillRegular.label>
+  <SSVaperRefillRegular.description>A cartridge used to refill vapers. This cartridge is filled with regular vape fluid.</SSVaperRefillRegular.description>
+
+
+  <!-- Fruity -->
+
+  <SSVaperFruity.label>Vaper (Fruity)</SSVaperFruity.label>
+  <SSVaperFruity.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive fruity flavour. Effects last about half a day.</SSVaperFruity.description>
+  <SSVaperFruity.comps.1.useLabel>Use Vaper (Fruity)</SSVaperFruity.comps.1.useLabel>
+
+  <SSVaperRefillFruity.label>Vaper Refill (Fruity)</SSVaperRefillFruity.label>
+  <SSVaperRefillFruity.description>A cartridge used to refill vapers. This cartridge is filled with fruity vape fluid.</SSVaperRefillFruity.description>
+
+
+  <!-- Menthol -->
+
+  <SSVaperMenthol.label>Vaper (Menthol)</SSVaperMenthol.label>
+  <SSVaperMenthol.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive minty flavour. Effects last about half a day.</SSVaperMenthol.description>
+  <SSVaperMenthol.comps.1.useLabel>Use Vaper (Menthol)</SSVaperMenthol.comps.1.useLabel>
+
+  <SSVaperRefillMenthol.label>Vaper Refill (Menthol)</SSVaperRefillMenthol.label>
+  <SSVaperRefillMenthol.description>A cartridge used to refill vapers. This cartridge is filled with menthol vape fluid.</SSVaperRefillMenthol.description>
+
+
+</LanguageData>

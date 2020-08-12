@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ====== Compatibility Patch ==================== -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Apothecary</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="PlantFoodRawBase">
+              <defName>AYCayennePowder</defName>
+              <label>Cayenne Pepper Powder</label>
+              <description>Dried and ground cayenne pepper</description>
+              <graphicData>
+                <texPath>Things/Item/Resource/Powders/AYCayennePowder/AYCayennePowder</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <drawSize>1.0</drawSize>
+              </graphicData>
+              <stackLimit>500</stackLimit>
+              <statBases>
+                <MaxHitPoints>50</MaxHitPoints>
+                <MarketValue>0.3</MarketValue>
+                <Mass>0.01</Mass>
+                <Flammability>0.75</Flammability>
+                <DeteriorationRate>0.5</DeteriorationRate>
+                <Nutrition>0.01</Nutrition>
+                <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+              </statBases>
+              <ingestible>
+                <preferability>RawBad</preferability>
+                <tasteThought>AteRawFood</tasteThought>
+                <foodType>VegetableOrFruit</foodType>
+                <ingestEffect>EatVegetarian</ingestEffect>
+                <ingestSound>RawVegetable_Eat</ingestSound>
+                <outcomeDoers>
+                  <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SSHedSpice</hediffDef>
+                    <severity>1.0</severity>
+                  </li>
+                </outcomeDoers>
+              </ingestible>
+              <thingCategories Inherit="false">
+                <li>AYPowders</li>
+                <li>PlantFoodRaw</li>
+              </thingCategories>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>MakeAYCayennePowder</defName>
+              <label>Make Cayenne Pepper Powder</label>
+              <description>Make 25 Cayenne Pepper Powder</description>
+              <jobString>Making Cayenne Pepper Powder</jobString>
+              <workSpeedStat>CookSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workAmount>650</workAmount>
+              <targetCountAdjustment>25</targetCountAdjustment>
+              <workSkill>Cooking</workSkill>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSChilliPeppers</li>
+                    </thingDefs>
+                  </filter>
+                  <count>5</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSChilliPeppers</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <AYCayennePowder>25</AYCayennePowder>
+              </products>
+              <recipeUsers>
+                <li>AYApothecaryTable</li>
+              </recipeUsers>
+              <skillRequirements>
+                <Cooking>4</Cooking>
+              </skillRequirements>
+              <researchPrerequisite>AYPowders</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>MakeBulkAYCayennePowder</defName>
+              <label>Make Cayenne Pepper Powder in bulk</label>
+              <description>Make 100 Cayenne Pepper Powder</description>
+              <jobString>Making Cayenne Pepper Powder</jobString>
+              <workSpeedStat>CookSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workAmount>2600</workAmount>
+              <targetCountAdjustment>100</targetCountAdjustment>
+              <workSkill>Cooking</workSkill>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSChilliPeppers</li>
+                    </thingDefs>
+                  </filter>
+                  <count>20</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSChilliPeppers</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <AYCayennePowder>100</AYCayennePowder>
+              </products>
+              <recipeUsers>
+                <li>AYApothecaryTable</li>
+              </recipeUsers>
+              <skillRequirements>
+                <Cooking>4</Cooking>
+              </skillRequirements>
+              <researchPrerequisite>AYPowders</researchPrerequisite>
+            </RecipeDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>MakeSSHotSauceFromPowders</defName>
+              <label>Make hot sauce from powders</label>
+              <description>Make 10 hot sauce</description>
+              <jobString>Making hot sauce</jobString>
+              <workSpeedStat>CookSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <workAmount>750</workAmount>
+              <targetCountAdjustment>10</targetCountAdjustment>
+              <workSkill>Cooking</workSkill>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>AYCayennePowder</li>
+                    </thingDefs>
+                  </filter>
+                  <count>250</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>AYCayennePowder</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <SSHotSauce>10</SSHotSauce>
+              </products>
+              <recipeUsers>
+                <li>Campfire</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+              </recipeUsers>
+              <skillRequirements>
+                <Cooking>3</Cooking>
+              </skillRequirements>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

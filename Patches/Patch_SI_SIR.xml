@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Smokeleaf Industry</li>
+      <li>Smokeleaf Industry Reborn</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Regular" or defName="MakeBulkSSVape_Regular"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Regular" or defName="MakeBulkSSVape_Regular"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Fruity" or defName="MakeBulkSSVape_Fruity"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Fruity" or defName="MakeBulkSSVape_Fruity"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Menthol" or defName="MakeBulkSSVape_Menthol"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVape_Menthol" or defName="MakeBulkSSVape_Menthol"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVaperRefillRegular" or defName="MakeSSVaperRefillFruity" or defName="MakeSSVaperRefillMenthol"]/ingredients/li[1]/filter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="MakeSSVaperRefillRegular" or defName="MakeSSVaperRefillFruity" or defName="MakeSSVaperRefillMenthol"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>SmokeleafBuds</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

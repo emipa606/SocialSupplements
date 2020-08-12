@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>SSGlucose</defName>
+    <label>Glucose Syrup</label>
+    <description>Glucose is a simple sugar with the molecular formula C6H12O6. Glucose is the most abundant monosaccharide, a subcategory of carbohydrates. Glucose is mainly made by plants and most algae during photosynthesis from water and carbon dioxide, using energy from sunlight. It can also be synthesised by hydrolysing some vegetable starches.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/SSGlucose</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>4.84</MarketValue>
+      <Mass>0.16</Mass>
+      <Flammability>0.85</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+      <Nutrition>0.12</Nutrition>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>Processed</foodType>
+      <tasteThought>AteRawFood</tasteThought>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>200</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSGlucose</defName>
+    <label>Make Glucose</label>
+    <description>Make 10 Glucose.</description>
+    <jobString>Hydrolising Glucose.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2500</workAmount>
+    <targetCountAdjustment>10</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSHydrochloricAcid</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPotatoes</li>
+            <li>RawRice</li>
+            <li>RawCorn</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MSHydrochloricAcid</li>
+        <li>RawPotatoes</li>
+        <li>RawRice</li>
+        <li>RawCorn</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSGlucose>10</SSGlucose>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>5</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>DrugProduction</researchPrerequisite>
+  </RecipeDef>
+</Defs>

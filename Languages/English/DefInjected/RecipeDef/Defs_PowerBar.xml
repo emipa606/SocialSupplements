@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MakeSSPowerBar.label>Make Power Bar</MakeSSPowerBar.label>
+  <MakeSSPowerBar.description>Prepare 1 Power Bar.</MakeSSPowerBar.description>
+  <MakeSSPowerBar.jobString>Preparing Power Bar.</MakeSSPowerBar.jobString>
+
+  <MakeBulkSSPowerBar.label>Make Power Bar in bulk</MakeBulkSSPowerBar.label>
+  <MakeBulkSSPowerBar.description>Prepare 5 Power Bars.</MakeBulkSSPowerBar.description>
+  <MakeBulkSSPowerBar.jobString>Preparing Power Bars.</MakeBulkSSPowerBar.jobString>
+
+
+</LanguageData>

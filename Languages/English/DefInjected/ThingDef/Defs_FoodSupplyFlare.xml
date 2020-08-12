@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SSGPSBeaconFood.label>GPS Beacon (Food)</SSGPSBeaconFood.label>
+  <SSGPSBeaconFood.description>A GPS beacon for food supplies. A one-time use component, that sends a radio burst signal to request supplies to a specific location.</SSGPSBeaconFood.description>
+
+
+  <!-- Food Supply Flare -->
+
+  <SSFoodSupplyFlare.label>Food Supply Flare</SSFoodSupplyFlare.label>
+  <SSFoodSupplyFlare.description>Single use launcher that applies marker gas to call in food supplies.</SSFoodSupplyFlare.description>
+  <SSFoodSupplyFlare.verbs.0.label>Food supply marker flare</SSFoodSupplyFlare.verbs.0.label>
+
+  <Grenade_SSFoodSupplyFlare.label>Food supply flare marker</Grenade_SSFoodSupplyFlare.label>
+
+
+  <!-- Gas : Thing -->
+
+  <Gas_SSFoodFlareMark.label>Food Supply Marker Gas</Gas_SSFoodFlareMark.label>
+
+
+</LanguageData>

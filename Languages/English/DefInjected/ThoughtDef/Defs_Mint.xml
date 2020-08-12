@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mint Tea -->
+
+  <SSMintTea_Thought.stages.0.label>Mint Tea</SSMintTea_Thought.stages.0.label>
+  <SSMintTea_Thought.stages.0.description>feeling refreshed</SSMintTea_Thought.stages.0.description>
+
+
+  <!-- Mint Chocolate bar -->
+
+  <AteSSMintChocolate.stages.0.label>ate mint chocolate</AteSSMintChocolate.stages.0.label>
+  <AteSSMintChocolate.stages.0.description>Mint chocolate is so scrumy</AteSSMintChocolate.stages.0.description>
+
+
+  <!-- Candy Cane -->
+
+  <AteSSCandyCane.stages.0.label>ate candy cane</AteSSCandyCane.stages.0.label>
+  <AteSSCandyCane.stages.0.description>Eating candy cane always reminds me of my youth</AteSSCandyCane.stages.0.description>
+
+
+</LanguageData>
