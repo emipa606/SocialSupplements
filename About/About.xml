@@ -24,16 +24,7 @@
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
-    <li>Mlie.Fermenter</li>
     <li>Mlie.MedicalSupplements</li>
-    <li>Mlie.Apothecary</li>
-    <li>Crustypeanut.RC2.Core</li>
-    <li>notfood.SeedsPlease</li>
-    <li>bishop.smokeleafindustryreborn</li>
-    <li>VanillaExpanded.VCookE</li>
-    <li>dismarzero.VGP.VGPVegetableGarden</li>
-    <li>dismarzero.VGP.VGPGardenMedicine</li>
-    <li>VanillaExpanded.VPlantsE</li>
   </loadAfter>
   <description>Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
