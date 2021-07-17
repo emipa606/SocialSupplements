@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Mint -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>SeedsPlease</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <SeedsPlease.SeedDef ParentName="SeedBase">
+              <defName>Seed_SSMint</defName>
+              <label>Mint shoots</label>
+              <sources>
+                <li>Plant_SSMint</li>
+              </sources>
+            </SeedsPlease.SeedDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef ParentName="ExtractSeed">
+              <defName>ExtractSeed_SSMint</defName>
+              <label>extract mint shoots</label>
+              <description>Prepares useful shoots from mint.</description>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSMintLeaves</li>
+                    </thingDefs>
+                  </filter>
+                  <count>7</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSMintLeaves</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Seed_SSMint>3</Seed_SSMint>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- PolyFlower -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>SeedsPlease</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <SeedsPlease.SeedDef ParentName="SeedBase">
+              <defName>Seed_SSPolyflower</defName>
+              <label>polyflower seeds</label>
+              <sources>
+                <li>Plant_SSPolyflower</li>
+              </sources>
+            </SeedsPlease.SeedDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef ParentName="ExtractSeed">
+              <defName>ExtractSeed_SSPolyflower</defName>
+              <label>extract polyflower seeds</label>
+              <description>Prepares seeds from polyflower.</description>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSPolyPetals</li>
+                    </thingDefs>
+                  </filter>
+                  <count>7</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSPolyPetals</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Seed_SSPolyflower>3</Seed_SSPolyflower>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Shitake Mushrooms -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>SeedsPlease</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <SeedsPlease.SeedDef ParentName="SeedBase">
+              <defName>Seed_SSMorel</defName>
+              <label>morel spores</label>
+              <sources>
+                <li>Plant_SSMorelMush</li>
+              </sources>
+            </SeedsPlease.SeedDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef ParentName="ExtractSeed">
+              <defName>ExtractSeed_SSMorel</defName>
+              <label>extract morel spores</label>
+              <description>Extract spores from morel mushrooms.</description>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSMorel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>4</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSMorel</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Seed_SSMorel>4</Seed_SSMorel>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

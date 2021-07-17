@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--  Social Supplements -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] RimFridge - 1.2</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="DrugCabinetFridge"]/building/fixedStorageSettings/filter/categories</xpath>
+          <value>
+            <li>SSDrugs</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="DrugCabinetFridge"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+          <value>
+            <li>SSMorel</li>
+            <li>SSMushSoup</li>
+            <li>SSGlucose</li>
+            <li>SSMintLeaves</li>
+            <li>SSMint_Tea</li>
+            <li>SSPolyPetals</li>
+            <li>SSHotSauce</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

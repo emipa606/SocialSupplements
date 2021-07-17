@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Social Supplements (Continued)</name>
   <packageId>Mlie.SocialSupplements</packageId>
@@ -7,6 +7,7 @@
   <supportedVersions>
     <li>1.1</li>
     <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -26,34 +27,36 @@
     <li>brrainz.harmony</li>
     <li>Mlie.MedicalSupplements</li>
   </loadAfter>
-  <description>Update of peladors mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-Support-chat:
-https://invite.gg/mlie
-
-Non-steam version:
-https://github.com/emipa606/SocialSupplements
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/SocialSupplements][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
-Overview
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
+[h1]Overview[/h1] V1.1
 
 Optional Expansion for Medical Supplements: Adds social items for use.
 
-(Note this mod is dependant on the Medical Supplements mod to work.)
+[b](Note this mod is dependant on the Medical Supplements mod to work.)[/b]
 
 
-Details
+[h1]Details[/h1]
 
 The following PDF document provides an understanding what this mod offers:
 
-Social Supplements Notes
-https://steamcommunity.com/linkfilter/?url=https://1drv.ms/b/s!Au3GsmKyQkDYispEPTdxW3va6zdhcQ?e=ScmDw1
+[url=https://1drv.ms/b/s!Au3GsmKyQkDYispEPTdxW3va6zdhcQ?e=ScmDw1]Social Supplements Notes[/url]
 
 
-Mod Notes
+[h1]Mod Notes[/h1]
 
 There are mood alterations associated with the above drugs as relevant and in keeping with a vanilla theme as best as possible, whilst still allowing for refinement.
 
@@ -61,34 +64,45 @@ Research projects associated and bulk recipes provided.
 
 Mod option to vary the base research costs by a percentage level.
 
-Bulk recipes for the vanilla drugs: Pekoe tea, flake, yayo, go-juice, wake-up and smokeleaf joints have been added.
+Bulk recipes for the vanilla drugs: Pekoe tea, flake, yayo, go-juice, wake-up  and smokeleaf joints have been added.
 
 Save compatible (Note: You will need to reassign new drug policies if part way through a savegame to schedule the use of the above SS drugs) and mod friendly. To remove the mod you would have to remove all items introduced first.
 
-Recommended
+[h1]Recommended[/h1]
 
-Drug Policy Fix; can be used to help manage and correct drugs added or removed part way through a save game. It will also sort the drug listings alphabetically.
-https://steamcommunity.com/sharedfiles/filedetails/?id=2195390245
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2000335507]Drug Policy Fix (V1.1)[/url]; can be used to help manage and correct drugs added or removed part way through a save game. It will also sort the drug listings alphabetically.
 
-Compatability Notes
-*** Subject to conversion ***
+[h1]Compatability Notes[/h1] *** Subject to conversion ***
 
-Apothecary - Can make Cayenne pepper powder, which doesn't spoil, can be used in food recipes and to make hot sauce.
-RimCuisine V1.2: Will use fruits and fungi in recipes.
-RimCuisine 2: Will use fruits and fungi in recipes. Will use chilli peppers to make hot sauce.
-Seeds Please - includes patch support to generate seeds/shoots/spores for plants used in this mod.
-Smokeleaf Industry - Vaping products will additionally use Buds in their recipes.
-Smokeleaf Industry Reborn - Vaping products will additionally use Buds in their recipes.
-VCE/VPE - fruits, peppers and other items will be used in applicable recipes.
-VGP Vegetable Garden: Will use fruits and mushroom in recipes. (Best putting VGP Garden before supplement mods).
-VGP Garden Medicine - Some vanilla bulk recipes are not added due to potential duplication.
+[b]Apothecary[/b] - Can make Cayenne pepper powder, which doesn&apos;t spoil, can be used in food recipes and to make hot sauce.
+[b]RimCuisine V1.2[/b]: Will use fruits and fungi in recipes.
+[b]RimCuisine 2[/b]: Will use fruits and fungi in recipes. Will use chilli peppers to make hot sauce.
+[b]Seeds Please[/b] - includes patch support to generate seeds/shoots/spores for plants used in this mod.
+[b]Smokeleaf Industry[/b] - Vaping products will additionally use Buds in their recipes.
+[b]Smokeleaf Industry Reborn[/b] - Vaping products will additionally use Buds in their recipes.
+[b]VCE/VPE[/b] - fruits, peppers and other items will be used in applicable recipes.
+[b]VGP Vegetable Garden[/b]: Will use fruits and mushroom in recipes. (Best putting VGP Garden before supplement mods).
+[b]VGP Garden Medicine[/b] - Some vanilla bulk recipes are not added due to potential duplication.
 
 
-Credits
+[h1]Credits[/h1]
 
 Some artwork revisions by Oskar Potocki.
 
 Chinese (Simplified) translation by Maxwell.J
 
-(CC BY-NC-SA 4.0)</description>
+(CC BY-NC-SA 4.0)
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+
