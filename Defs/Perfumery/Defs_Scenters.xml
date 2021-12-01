@@ -18,18 +18,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  <!-- Research -->
-  <ResearchProjectDef>
-    <defName>SSScenters</defName>
-    <label>Scenters</label>
-    <description>Grants the ability to make Scenters.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>SSPolyflower</li>
-    </prerequisites>
-    <tab>SocialSuppTab</tab>
-  </ResearchProjectDef>
   <!-- =========== Scenters ==================== -->
   <!-- Neutral -->
   <ThingDef ParentName="DrugBase">

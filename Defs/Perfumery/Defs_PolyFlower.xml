@@ -74,18 +74,6 @@
       <preferability>DesperateOnly</preferability>
     </ingestible>
   </ThingDef>
-  <!-- Research -->
-  <ResearchProjectDef>
-    <defName>SSPolyflower</defName>
-    <label>Polyflower</label>
-    <description>Grants the ability to plant the polyflower.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>MSPhenol</li>
-    </prerequisites>
-    <tab>SocialSuppTab</tab>
-  </ResearchProjectDef>
   <!-- ====================== Polyflower Juice ================== -->
   <ThingDef ParentName="ResourceBase">
     <defName>SSPolyflowerJuice</defName>

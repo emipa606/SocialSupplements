@@ -15,6 +15,8 @@
       <li>MSGlycerol</li>
     </prerequisites>
     <tab>SocialSuppTab</tab>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.25</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>SSMouthWash</defName>
@@ -26,6 +28,8 @@
       <li>MSGlycerol</li>
     </prerequisites>
     <tab>SocialSuppTab</tab>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.25</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>SSVape</defName>
@@ -37,5 +41,33 @@
       <li>MSGlycerol</li>
     </prerequisites>
     <tab>SocialSuppTab</tab>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.25</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>SSPolyflower</defName>
+    <label>Polyflower</label>
+    <description>Grants the ability to plant the polyflower.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MSPhenol</li>
+    </prerequisites>
+    <tab>SocialSuppTab</tab>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.25</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>SSScenters</defName>
+    <label>Scenters</label>
+    <description>Grants the ability to make Scenters.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SSPolyflower</li>
+    </prerequisites>
+    <tab>SocialSuppTab</tab>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.25</researchViewY>
   </ResearchProjectDef>
 </Defs>

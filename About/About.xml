@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Social Supplements (Continued)</name>
   <packageId>Mlie.SocialSupplements</packageId>
@@ -27,11 +27,11 @@
     <li>brrainz.harmony</li>
     <li>Mlie.MedicalSupplements</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -40,7 +40,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 [h1]Overview[/h1] V1.1
 
@@ -74,7 +74,7 @@ Save compatible (Note: You will need to reassign new drug policies if part way t
 
 [h1]Compatability Notes[/h1] *** Subject to conversion ***
 
-[b]Apothecary[/b] - Can make Cayenne pepper powder, which doesn&apos;t spoil, can be used in food recipes and to make hot sauce.
+[b]Apothecary[/b] - Can make Cayenne pepper powder, which doesn't spoil, can be used in food recipes and to make hot sauce.
 [b]RimCuisine V1.2[/b]: Will use fruits and fungi in recipes.
 [b]RimCuisine 2[/b]: Will use fruits and fungi in recipes. Will use chilli peppers to make hot sauce.
 [b]Seeds Please[/b] - includes patch support to generate seeds/shoots/spores for plants used in this mod.
@@ -94,7 +94,7 @@ Chinese (Simplified) translation by Maxwell.J
 (CC BY-NC-SA 4.0)
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -105,4 +105,3 @@ Chinese (Simplified) translation by Maxwell.J
 [/list]
 </description>
 </ModMetaData>
-

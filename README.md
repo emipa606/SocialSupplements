@@ -1,23 +1,14 @@
 # SocialSupplements
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/SocialSupplements]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 # Overview
@@ -57,7 +48,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2000335507]Drug Policy Fi
 # Compatability Notes
  *** Subject to conversion ***
 
-**Apothecary** - Can make Cayenne pepper powder, which doesn&apos;t spoil, can be used in food recipes and to make hot sauce.
+**Apothecary** - Can make Cayenne pepper powder, which doesn't spoil, can be used in food recipes and to make hot sauce.
 **RimCuisine V1.2**: Will use fruits and fungi in recipes.
 **RimCuisine 2**: Will use fruits and fungi in recipes. Will use chilli peppers to make hot sauce.
 **Seeds Please** - includes patch support to generate seeds/shoots/spores for plants used in this mod.
@@ -78,7 +69,7 @@ Chinese (Simplified) translation by Maxwell.J
 (CC BY-NC-SA 4.0)
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
