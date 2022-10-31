@@ -2,6 +2,7 @@
 <LanguageData>
   <!--  SSOptions -->
   <SSOpt.Name>Social Supplements</SSOpt.Name>
+  <SSOpt.CurrentModVersion>Installed mod-version: {0}</SSOpt.CurrentModVersion>
   <SSOpt.ResPct>Relative cost for research %:</SSOpt.ResPct>
   <SSOpt.ResTip>Note these changes will only take effect when RimWorld is restarted.</SSOpt.ResTip>
   <SSOpt.ResWarn>(Warning: increasing the % will mean research will become incomplete using the previous value.)</SSOpt.ResWarn>

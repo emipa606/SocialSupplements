@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Category -->
+  <ThingCategoryDef>
+    <defName>SSDrugs</defName>
+    <label>Social Supplements</label>
+    <parent>Drugs</parent>
+    <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+  </ThingCategoryDef>
+</Defs>

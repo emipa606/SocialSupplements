@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Plant -->
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_SSChilli</defName>
+    <label>Cayenne Pepper Plant</label>
+    <description>A species of the plant genus Capsicum (peppers). This particular variety produces fruit with a medium pungency (spicy heat).</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Nutrition>0.20</Nutrition>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>25</pathCost>
+    <graphicData>
+      <texPath>Things/Plant/SSChilli</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>5</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SSChilliPeppers</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+      <sowMinSkill>5</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <harvestWork>50</harvestWork>
+      <visualSizeRange Inherit="false">
+        <min>0.3</min>
+        <max>0.85</max>
+      </visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  <!-- Peppers -->
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>SSChilliPeppers</defName>
+    <label>Cayenne Peppers</label>
+    <description>Raw cayenne peppers.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/SSChilliPeppers/SSChilliPeppers</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Nutrition>0.04</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+      <Flammability>0.75</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSHedSpice</hediffDef>
+          <severity>0.75</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>65</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- Hot Sauce -->
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>SSHotSauce</defName>
+    <label>Hot Sauce</label>
+    <description>A spicy hot sauce prepared from cayenne peppers.</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/SSHotSauce</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Nutrition>0.04</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>0.05</Mass>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSHedSpice</hediffDef>
+          <severity>0.75</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>130</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSHotSauce</defName>
+    <label>Make hot sauce</label>
+    <description>Make 5 hot sauce.</description>
+    <jobString>Making hot sauce.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSChilliPeppers</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSChilliPeppers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSHotSauce>5</SSHotSauce>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSHotSauce</defName>
+    <label>Make hot sauce in bulk</label>
+    <description>Make 20 hot sauce.</description>
+    <jobString>Making hot sauce.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2000</workAmount>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSChilliPeppers</li>
+          </thingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSChilliPeppers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSHotSauce>20</SSHotSauce>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>5</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

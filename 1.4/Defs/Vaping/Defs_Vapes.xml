@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ============================= Vapes ========================================= -->
+  <!-- == Regular == -->
+  <ThingDef ParentName="DrugBase">
+    <defName>SSVape_Regular</defName>
+    <label>Vape (Regular)</label>
+    <description>Device to allow vaping of smokeleaf. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</description>
+    <graphicData>
+      <texPath>Things/Item/SSVape/SSVape_Regular</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>34.9</MarketValue>
+      <Mass>0.1</Mass>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.85</joy>
+      <baseIngestTicks>720</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Joint</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Vaping {0}.</ingestReportString>
+      <ingestReportStringEat>Vaping {0}.</ingestReportStringEat>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSVape_Regular_High</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SmokeleafTolerance</hediffDef>
+          <severity>0.02</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Smokeleaf</chemical>
+        <addictiveness>0.015</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSVape_Regular_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>smokeleaf vape</label>
+    <description>smokeleaf vape effect</description>
+    <labelNoun>a smokeleaf vape high</labelNoun>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <hungerRateFactorOffset>0.20</hungerRateFactorOffset>
+        <painOffset>-0.25</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>SSVape_Regular_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SSVape_Regular_High</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on smokeleaf vape</label>
+        <description>I'm, like, stoned, man.</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <RecipeDef>
+    <defName>MakeSSVape_Regular</defName>
+    <label>Make Vape (Regular)</label>
+    <description>Make 1 Smokeleaf Vape (Regular).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Regular>1</SSVape_Regular>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>5</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- ===== Bulk ===== -->
+  <RecipeDef>
+    <defName>MakeBulkSSVape_Regular</defName>
+    <label>Make Vape (Regular) in bulk</label>
+    <description>Make 5 Smokeleaf Vapes (Regular).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2400</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Regular>5</SSVape_Regular>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- == Fruity == -->
+  <ThingDef ParentName="DrugBase">
+    <defName>SSVape_Fruity</defName>
+    <label>Vape (Fruity)</label>
+    <description>Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive fruity flavour. Effects last about half a day.</description>
+    <graphicData>
+      <texPath>Things/Item/SSVape/SSVape_Fruity</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>37.3</MarketValue>
+      <Mass>0.1</Mass>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.85</joy>
+      <baseIngestTicks>720</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Joint</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Vaping {0}.</ingestReportString>
+      <ingestReportStringEat>Vaping {0}.</ingestReportStringEat>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSVape_Fruity_High</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SmokeleafTolerance</hediffDef>
+          <severity>0.02</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Smokeleaf</chemical>
+        <addictiveness>0.015</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSVape_Fruity_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>fruity smokeleaf vape</label>
+    <description>fruity smokeleaf vape effect</description>
+    <labelNoun>a smokeleaf vape high</labelNoun>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <hungerRateFactorOffset>0.15</hungerRateFactorOffset>
+        <painOffset>-0.25</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>SSVape_Fruity_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SSVape_Fruity_High</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>fruity smokeleaf vape</label>
+        <description>I'm, like, stoned, man.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- ===== Recipes ===== -->
+  <RecipeDef>
+    <defName>MakeSSVape_Fruity</defName>
+    <label>Make Vape (Fruity)</label>
+    <description>Make Smokeleaf Vape (Fruity).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+            <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Fruity>1</SSVape_Fruity>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSVape_Fruity</defName>
+    <label>Make Vape (Fruity) in bulk</label>
+    <description>Make 5 Smokeleaf Vapes (Fruity).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2450</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+            <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Fruity>5</SSVape_Fruity>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>7</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- == Menthol == -->
+  <ThingDef ParentName="DrugBase">
+    <defName>SSVape_Menthol</defName>
+    <label>Vape (Menthol)</label>
+    <description>Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive minty flavour. Effects last about half a day.</description>
+    <graphicData>
+      <texPath>Things/Item/SSVape/SSVape_Menthol</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>36.7</MarketValue>
+      <Mass>0.1</Mass>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.85</joy>
+      <baseIngestTicks>720</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Joint</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Vaping {0}.</ingestReportString>
+      <ingestReportStringEat>Vaping {0}.</ingestReportStringEat>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSVape_Menthol_High</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SmokeleafTolerance</hediffDef>
+          <severity>0.02</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Smokeleaf</chemical>
+        <addictiveness>0.015</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSVape_Menthol_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>menthol smokeleaf vape</label>
+    <description>menthol smokeleaf vape effect</description>
+    <labelNoun>a smokeleaf vape high</labelNoun>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <hungerRateFactorOffset>0.15</hungerRateFactorOffset>
+        <painOffset>-0.25</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>SSVape_Menthol_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SSVape_Menthol_High</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>minty smokeleaf vape</label>
+        <description>I'm, like, stoned, man.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <RecipeDef>
+    <defName>MakeSSVape_Menthol</defName>
+    <label>Make Vape (Menthol)</label>
+    <description>Make 1 Smokeleaf Vape (Menthol).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>SSMintLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Menthol>1</SSVape_Menthol>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- ===== Bulk ===== -->
+  <RecipeDef>
+    <defName>MakeBulkSSVape_Menthol</defName>
+    <label>Make Vape (Menthol) in bulk</label>
+    <description>Make 5 Smokeleaf Vapes (Menthol).</description>
+    <jobString>Making Smokeleaf Vape.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>2450</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>SSMintLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVape_Menthol>5</SSVape_Menthol>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>7</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ============================ Mint ==================================== -->
+  <!-- === Plant === -->
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_SSMint</defName>
+    <label>Mint</label>
+    <description>Mentha (also known as mint) is a genus of plants in the family Lamiaceae (mint family). It is an aromatic herb used in food preparation with a distinct fresh appeal.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Nutrition>0.16</Nutrition>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <graphicData>
+      <texPath>Things/Plant/SSMint</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>6</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SSMintLeaves</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>4</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <harvestWork>50</harvestWork>
+      <visualSizeRange Inherit="false">
+        <min>0.3</min>
+        <max>0.85</max>
+      </visualSizeRange>
+      <topWindExposure>0.2</topWindExposure>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  <!-- === Leaves === -->
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>SSMintLeaves</defName>
+    <label>Mint leaves</label>
+    <description>Raw cut leaves of the mint plant. The leaves have a warm, fresh, aromatic, sweet flavor with a cool aftertaste.</description>
+    <graphicData>
+      <texPath>Things/Item/SSMintLeaves/SSMintLeaves</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.9</MarketValue>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>45</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- ============================= Mint Tea ============================================= -->
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SSMint_Tea</defName>
+    <label>Mint Tea</label>
+    <description>Refreshing beverage steeped from mint leaves and a dash of psychoid for good measure. Can be served hot or cold. Active for about half a day.</description>
+    <graphicData>
+      <texPath>Things/Item/SSMint_Tea</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.08</Mass>
+      <DeteriorationRate>3</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.10</joy>
+      <baseIngestTicks>240</baseIngestTicks>
+      <nurseable>false</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSMintTea_High</hediffDef>
+          <severity>0.45</severity>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.1</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PsychiteTolerance</hediffDef>
+          <severity>0.01</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+    </recipeMaker>
+    <costList>
+      <SSMintLeaves>4</SSMintLeaves>
+      <PsychoidLeaves>1</PsychoidLeaves>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Psychite</chemical>
+        <addictiveness>0.01</addictiveness>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.15</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>3112</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSMintTea_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Refreshed by mint tea</label>
+    <description>Mint tea effect</description>
+    <labelNoun>a mint tea effect</labelNoun>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <hungerRateFactorOffset>-0.05</hungerRateFactorOffset>
+        <restFallFactor>0.95</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>+0.03</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.02</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>+0.10</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>SSMintTea_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SSMintTea_High</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Mint Tea</label>
+        <description>feeling refreshed</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- =========== Bulk Recipe =============== -->
+  <RecipeDef>
+    <defName>MakeBulkSSMintTea</defName>
+    <label>Make Mint Tea in bulk</label>
+    <description>Steep 5 mint teas.</description>
+    <jobString>Steeping mint tea.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>1850</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PsychoidLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMintLeaves</li>
+        <li>PsychoidLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMint_Tea>5</SSMint_Tea>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+  </RecipeDef>
+  <!-- ====================== Mint Chocolate bar ================== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>SSMintChocolate</defName>
+    <label>Mint chocolate</label>
+    <description>A delicious preparation of mint and chocolate. It fulfils the need for recreation, but it is not very nutritious.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSMintChocolate</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <!-- <drawSize>0.88</drawSize> -->
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>7.5</MarketValue>
+      <Mass>0.075</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>8</DeteriorationRate>
+      <Nutrition>0.1</Nutrition>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <joy>0.15</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>AteSSMintChocolate</tasteThought>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>AteSSMintChocolate</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>0.5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>ate mint chocolate</label>
+        <description>Mint chocolate is so scrumy</description>
+        <baseMoodEffect>+7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <JoyGiverDef>
+    <defName>SSEatMintChocolate</defName>
+    <giverClass>JoyGiver_Ingest</giverClass>
+    <baseChance>5.0</baseChance>
+    <pctPawnsEverDo>0.5</pctPawnsEverDo>
+    <thingDefs>
+      <li>SSMintChocolate</li>
+    </thingDefs>
+    <joyKind>Meditative</joyKind>
+    <requiredCapacities>
+      <li>Manipulation</li>
+      <li>Eating</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  <!-- ==== Recipes ==== -->
+  <RecipeDef>
+    <defName>MakeSSMintChocolate</defName>
+    <label>Make Mint Chocolate</label>
+    <description>Preparing mint chocolate.</description>
+    <jobString>Preparing mint chocolate.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>700</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMintLeaves</li>
+        <li>Chocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMintChocolate>1</SSMintChocolate>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>Cocoa</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMintChocolate</defName>
+    <label>Make Mint Chocolate in bulk</label>
+    <description>Preparing 5 mint chocolates.</description>
+    <jobString>Preparing mint chocolate.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>3400</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMintLeaves</li>
+        <li>Chocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMintChocolate>5</SSMintChocolate>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>Cocoa</researchPrerequisite>
+  </RecipeDef>
+  <!-- ====================== Candy Cane ================== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>SSCandyCane</defName>
+    <label>Candy cane</label>
+    <description>A sweet preparation of mint and glucose. It fulfils the need for recreation, but it is not very nutritious.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSCandyCane</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>9.34</MarketValue>
+      <Mass>0.055</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>25</stackLimit>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <joy>0.10</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>AteSSCandyCane</tasteThought>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSSugarRush</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSSugarRush</defName>
+    <label>Sugar rush</label>
+    <description>Sugar rush effect</description>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>0.5</maxSeverity>
+    <lethalSeverity>-1.0</lethalSeverity>
+    <defaultLabelColor>(0.65, 0.65, 0.65)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>false</lifeThreatening>
+        <statOffsets>
+          <SocialImpact>+0.05</SocialImpact>
+          <GlobalLearningFactor>+0.05</GlobalLearningFactor>
+          <ResearchSpeed>+0.02</ResearchSpeed>
+          <PsychicSensitivity>-0.05</PsychicSensitivity>
+          <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+        </statOffsets>
+        <restFallFactor>1.05</restFallFactor>
+        <socialFightChanceFactor>0.95</socialFightChanceFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>AteSSCandyCane</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>0.75</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>ate candy cane</label>
+        <description>Eating candy cane always reminds me of my youth</description>
+        <baseMoodEffect>+5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <JoyGiverDef>
+    <defName>SSEatCandyCane</defName>
+    <giverClass>JoyGiver_Ingest</giverClass>
+    <baseChance>3.0</baseChance>
+    <pctPawnsEverDo>0.3</pctPawnsEverDo>
+    <thingDefs>
+      <li>SSCandyCane</li>
+    </thingDefs>
+    <joyKind>Meditative</joyKind>
+    <requiredCapacities>
+      <li>Manipulation</li>
+      <li>Eating</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  <!-- ==== Recipes ==== -->
+  <RecipeDef>
+    <defName>MakeSSCandyCane</defName>
+    <label>Make Candy cane</label>
+    <description>Preparing candy cane.</description>
+    <jobString>Preparing candy cane.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSGlucose</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMintLeaves</li>
+        <li>SSGlucose</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSCandyCane>1</SSCandyCane>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>DrugProduction</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSCandyCane</defName>
+    <label>Make Candy cane in bulk</label>
+    <description>Preparing 5 candy cane.</description>
+    <jobString>Preparing candy cane.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>2500</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSGlucose</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMintLeaves</li>
+        <li>SSGlucose</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSCandyCane>5</SSCandyCane>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>DrugProduction</researchPrerequisite>
+  </RecipeDef>
+</Defs>

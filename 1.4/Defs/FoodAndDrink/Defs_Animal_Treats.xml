@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SSAnimalTreats</defName>
+    <label>Animal Treats</label>
+    <description>A sweetened kibble fortified with powdered milk that is non-perishable.</description>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <graphicData>
+      <texPath>Things/Item/SSAnimalTreats</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.35</MarketValue>
+      <Mass>0.015</Mass>
+      <Nutrition>0.07</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <foodType>Kibble</foodType>
+      <preferability>RawTasty</preferability>
+      <tasteThought>AteSSAnimalTreat</tasteThought>
+      <optimalityOffsetHumanlikes>-25</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>50</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSAnimalTreatHigh</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>SSAnimalTreatHigh</defName>
+    <label>Ate animal treats</label>
+    <description>Animal treat effect</description>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>0.5</maxSeverity>
+    <lethalSeverity>-1.0</lethalSeverity>
+    <defaultLabelColor>(0.65, 0.65, 0.65)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>false</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>AteSSAnimalTreat</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>0.5</durationDays>
+    <stages>
+      <li>
+        <label>ate animal treats</label>
+        <description>I had to eat animal treats.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <RecipeDef>
+    <defName>MakeSSAnimalTreats</defName>
+    <label>Make Animal Treats</label>
+    <description>Make 50 Animal Treats.</description>
+    <jobString>Making Animal Treats.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1500</workAmount>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMilkPowder</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSGlucose</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Kibble</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSMilkPowder</li>
+        <li>SSGlucose</li>
+        <li>Kibble</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSAnimalTreats>50</SSAnimalTreats>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

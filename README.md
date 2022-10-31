@@ -5,6 +5,8 @@
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068
 
+- For detailed description, download the https://github.com/emipa606/SocialSupplements/raw/main/Source/SocialSupplementsNotes.pdf]PDF
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
@@ -79,6 +81,7 @@ Chinese (Simplified) translation by Maxwell.J
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 

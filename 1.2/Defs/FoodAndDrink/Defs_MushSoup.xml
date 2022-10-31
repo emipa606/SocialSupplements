@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MealBase">
+    <defName>SSMushSoup</defName>
+    <label>Creamy Mushroom Soup</label>
+    <description>A soothing culinary blend of mushrooms, milk and insect jelly. Ideal as food for the sick or infirm in recovery as it improves mood and blood filtration slightly and adds a little recreation value.
+			\n\nBe advised that it can make a person feeling more soporific, so best to ensure that their consciousness is not at a risky level.</description>
+    <graphicData>
+      <texPath>Things/Item/SSMushSoup</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <statBases>
+      <MarketValue>30.2</MarketValue>
+      <Mass>0.25</Mass>
+      <Nutrition>0.5</Nutrition>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0.1</Beauty>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <DeteriorationRate>8</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <tasteThought>AteFineMeal</tasteThought>
+      <joy>0.10</joy>
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedSSMushSoup</hediffDef>
+          <severity>0.33</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>3</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <tradeability>Buyable</tradeability>
+    <pathCost>15</pathCost>
+  </ThingDef>
+  <!-- Effects -->
+  <HediffDef>
+    <defName>HedSSMushSoup</defName>
+    <label>Ate mushroom soup</label>
+    <description>Mushroom soup effect</description>
+    <!-- <initialSeverity>1</initialSeverity> -->
+    <defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>Mushroom Soup</label>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>+0.03</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>ThoughtSSMushSoup</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HedSSMushSoup</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Mushroom Soup</label>
+        <description>feeling comforted</description>
+        <baseMoodEffect>+2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Recipes -->
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookSSMushSoup</defName>
+    <label>cook mushroom soup</label>
+    <description>Cooks creamy mushroom soup.</description>
+    <jobString>Cooking mushroom soup.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workAmount>300</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFungus</li>
+            <li>SSMorel</li>
+          </thingDefs>
+        </filter>
+        <count>0.30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>InsectJelly</li>
+          </thingDefs>
+        </filter>
+        <count>0.10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFungus</li>
+        <li>Milk</li>
+        <li>InsectJelly</li>
+        <li>SSMorel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <products>
+      <SSMushSoup>1</SSMushSoup>
+    </products>
+    <skillRequirements>
+      <Cooking>6</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookBulkSSMushSoup</defName>
+    <label>cook 4 mushroom soup</label>
+    <description>Cooks 4 creamy mushroom soup.</description>
+    <jobString>Cooking mushroom soup.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workAmount>1200</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFungus</li>
+            <li>SSMorel</li>
+          </thingDefs>
+        </filter>
+        <count>1.2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>InsectJelly</li>
+          </thingDefs>
+        </filter>
+        <count>0.40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFungus</li>
+        <li>Milk</li>
+        <li>InsectJelly</li>
+        <li>SSMorel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <products>
+      <SSMushSoup>4</SSMushSoup>
+    </products>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>

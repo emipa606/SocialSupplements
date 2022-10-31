@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Thing Category -->
+  <ThingCategoryDef>
+    <defName>SSFoodMealsSpicy</defName>
+    <label>Spicy Meals</label>
+    <parent>Foods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+  <!-- Spicy Meals Base -->
+  <ThingDef Name="SSMealSpicyBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+      <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>FoodMeals</li>
+      <li>SSFoodMealsSpicy</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <pathCost>15</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <uiIconForStackCount>1</uiIconForStackCount>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSHedSpice</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+      <joy>0.05</joy>
+      <joyKind>Gluttonous</joyKind>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="SSMealSpicyBase" Name="SSMealSpicyRottable" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <tradeability>Buyable</tradeability>
+  </ThingDef>
+  <!-- Spicy Food Hediff -->
+  <HediffDef>
+    <defName>SSHedSpice</defName>
+    <label>Ate Spicy food</label>
+    <description>Spicy food effect</description>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <lethalSeverity>-1.0</lethalSeverity>
+    <defaultLabelColor>(0.65, 0.65, 0.65)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.95</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>false</lifeThreatening>
+        <painFactor>0.85</painFactor>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.07</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.45</minSeverity>
+        <lifeThreatening>false</lifeThreatening>
+        <painFactor>0.82</painFactor>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <!-- Spicy Meals -->
+  <ThingDef ParentName="SSMealSpicyBase">
+    <defName>SSMealSurvivalPackSpicy</defName>
+    <label>spicy packaged survival meal</label>
+    <description>A high-quality packaged meal combined with hot sauce, manufactured for use in survival situations. While it never rots, it can still deteriorate if left outside. Great for traveling.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SSMealSurvivalPackSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>30</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>150</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <tasteThought>SSAteSurvivalMealSpicy</tasteThought>
+      <optimalityOffsetHumanlikes>-3</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAteSurvivalMealSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy survival meal</label>
+        <description>I ate a spicy survival meal.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThingDef ParentName="SSMealSpicyBase">
+    <defName>SSMealTravelPackSpicy</defName>
+    <label>spicy packaged travel meal</label>
+    <description>A deluxe-quality packaged meal combined with hot sauce, manufactured for use while traveling. While it never rots, it can still deteriorate if left outside. Ideal for traveling.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SSMealTravelPackSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>47</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>150</WorkToMake>
+      <Nutrition>1.0</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+      <tasteThought>SSAteTravelMealSpicy</tasteThought>
+      <optimalityOffsetHumanlikes>-1</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAteTravelMealSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy travel meal</label>
+        <description>I ate a spicy travel meal.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThingDef ParentName="SSMealSpicyRottable">
+    <defName>SSMealSimpleSpicy</defName>
+    <label>spicy simple meal</label>
+    <description>A simple meal quickly cooked from one main ingredient and combined with hot sauce.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SSMealSimpleSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>21</MarketValue>
+      <WorkToMake>150</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <tasteThought>SSAteSimpleMealSpicy</tasteThought>
+      <optimalityOffsetHumanlikes>+2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAteSimpleMealSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy simple meal</label>
+        <description>I ate a spicy meal.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThingDef ParentName="SSMealSpicyRottable">
+    <defName>SSMealFineSpicy</defName>
+    <label>spicy fine meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients and combined with hot sauce.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SSMealFineSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>26</MarketValue>
+      <WorkToMake>150</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <tasteThought>SSAteFineMealSpicy</tasteThought>
+      <optimalityOffsetHumanlikes>+2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAteFineMealSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy fine meal</label>
+        <description>I ate a really tasty fine spicy meal. Yum!</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThingDef ParentName="SSMealSpicyRottable">
+    <defName>SSMealLavishSpicy</defName>
+    <label>spicy lavish meal</label>
+    <description>A masterpiece of the culinary arts, this spicy meal flavoured with hot sauce nourishes the body, mind, and soul.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SSMealLavishSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>47</MarketValue>
+      <WorkToMake>200</WorkToMake>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+      <tasteThought>SSAteLavishMealSpicy</tasteThought>
+      <optimalityOffsetHumanlikes>+2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAteLavishMealSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy lavish meal</label>
+        <description>That spicy lavish meal was amazing. It nourished my body and my soul.</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Spicy Pemmican -->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SSPemmicanSpicy</defName>
+    <label>spicy pemmican</label>
+    <description>A preserved mashed mixture of fat and plant food combined with hot sauce. Tastes bland, but not offensive and has a bit of a heat kick. It lasts a very long time without refrigeration. Great for traveling.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SSFoodMealsSpicy</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSPemmicanSpicy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.018</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>150</WorkToMake>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>8</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSHedSpice</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+      <joy>0.02</joy>
+      <joyKind>Gluttonous</joyKind>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>70</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>SSAtePemmicanSpicy</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate spicy pemmican</label>
+        <description>I ate spicy pemmican.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Recipes -->
+  <!-- Survival -->
+  <RecipeDef>
+    <defName>MakeSSMealSurvivalPackSpicy</defName>
+    <label>Make Spicy Survival Meal</label>
+    <description>Spice up a survival meal.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>150</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSurvivalPack</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSurvivalPack</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealSurvivalPackSpicy>1</SSMealSurvivalPackSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>9</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMealSurvivalPackSpicy</defName>
+    <label>Make Spicy Survival Meals in bulk</label>
+    <description>Spice up 4 survival meals.</description>
+    <jobString>spicing up meals.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>600</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSurvivalPack</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSurvivalPack</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealSurvivalPackSpicy>4</SSMealSurvivalPackSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  <!-- Travel -->
+  <RecipeDef>
+    <defName>MakeSSMealTravelPackSpicy</defName>
+    <label>Make Spicy Travel Meal</label>
+    <description>Spice up a travel meal.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>150</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSurvivalPack</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSurvivalPack</li>
+        <li>SSHotSauce</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealTravelPackSpicy>1</SSMealTravelPackSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMealTravelPackSpicy</defName>
+    <label>Make Spicy Travel Meals in bulk</label>
+    <description>Spice up 4 travel meals.</description>
+    <jobString>spicing up meals.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>600</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSurvivalPack</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSurvivalPack</li>
+        <li>SSHotSauce</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealTravelPackSpicy>4</SSMealTravelPackSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>11</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+  </RecipeDef>
+  <!-- Simple -->
+  <RecipeDef>
+    <defName>MakeSSMealSimpleSpicy</defName>
+    <label>Make Spicy Simple Meal</label>
+    <description>Spice up a simple meal.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>150</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSimple</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSimple</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealSimpleSpicy>1</SSMealSimpleSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMealSimpleSpicy</defName>
+    <label>Make Spicy Simple Meal in bulk</label>
+    <description>Spice up 4 simple meals.</description>
+    <jobString>spicing up meals.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>600</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealSimple</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealSimple</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealSimpleSpicy>4</SSMealSimpleSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <!-- Fine -->
+  <RecipeDef>
+    <defName>MakeSSMealFineSpicy</defName>
+    <label>Make Spicy Fine Meal</label>
+    <description>Spice up a fine meal.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>150</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealFine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealFine</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealFineSpicy>1</SSMealFineSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMealFineSpicy</defName>
+    <label>Make Spicy Fine Meals in bulk</label>
+    <description>Spice up 4 fine meals.</description>
+    <jobString>spicing up meals.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>600</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealFine</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealFine</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealFineSpicy>4</SSMealFineSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <!-- Lavish -->
+  <RecipeDef>
+    <defName>MakeSSMealLavishSpicy</defName>
+    <label>Make Spicy Lavish Meal</label>
+    <description>Spice up a lavish meal.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>200</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealLavish</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealLavish</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealLavishSpicy>1</SSMealLavishSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>9</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSMealLavishSpicy</defName>
+    <label>Make Spicy Lavish Meals</label>
+    <description>Spice up 4 lavish meals.</description>
+    <jobString>spicing up meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>800</workAmount>
+    <targetCountAdjustment>4</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MealLavish</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MealLavish</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSMealLavishSpicy>4</SSMealLavishSpicy>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>10</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+  <!-- Pemmican -->
+  <RecipeDef>
+    <defName>MakeSSPemmicanSpicy</defName>
+    <label>Make Spicy Pemmican</label>
+    <description>Spice up 5 pemmican.</description>
+    <jobString>spicing up pemmican.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>150</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Pemmican</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Pemmican</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSPemmicanSpicy>5</SSPemmicanSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>Pemmican</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeBulkSSPemmicanSpicy</defName>
+    <label>Make Spicy Pemmican in bulk</label>
+    <description>Spice up 25 pemmican.</description>
+    <jobString>spicing up pemmican.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <workAmount>750</workAmount>
+    <targetCountAdjustment>25</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Pemmican</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSHotSauce</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Pemmican</li>
+        <li>SSHotSauce</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSPemmicanSpicy>25</SSPemmicanSpicy>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>Pemmican</researchPrerequisite>
+  </RecipeDef>
+</Defs>

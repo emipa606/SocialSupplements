@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Base -->
+  <ThingDef ParentName="ResourceBase" Name="SSVaperBase" Abstract="True">
+    <thingClass>SSVapes.SSVapeData</thingClass>
+    <techLevel>Industrial</techLevel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.25</Mass>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <stackLimit>10</stackLimit>
+    <thingCategories>
+      <li>SSDrugs</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_UseEffect">
+        <compClass>SSVapes.CompUseEffect_SSVape</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase" Name="SSVaperRefillBase" Abstract="True">
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>600</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  <!-- Empty -->
+  <ThingDef ParentName="SSVaperBase">
+    <defName>SSVaperEmpty</defName>
+    <label>Vaper (Empty)</label>
+    <description>Device to allow vaping of smokeleaf with a number of uses, though this is item is empty. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/SSVaper/SSVaperEmpty/SSVaperEmpty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>41.5</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="SSVapes.CompProperties_SSVapeUses">
+        <SSVapeUses>0</SSVapeUses>
+        <SSVapeType>empty</SSVapeType>
+      </li>
+    </comps>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaper_Empty</defName>
+    <label>Make Vaper (Empty)</label>
+    <description>Make Smokeleaf Vaper (Empty).</description>
+    <jobString>Making Smokeleaf Vaper.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperEmpty>1</SSVaperEmpty>
+    </products>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- Regular -->
+  <ThingDef ParentName="SSVaperBase">
+    <defName>SSVaperRegular</defName>
+    <label>Vaper (Regular)</label>
+    <description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/SSVaper/SSVaperRegular/SSVaperRegular</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use Vaper (Regular)</useLabel>
+        <useDuration>350</useDuration>
+      </li>
+      <li Class="SSVapes.CompProperties_SSVapeUses">
+        <SSVapeUses>20</SSVapeUses>
+        <SSVapeType>regular</SSVapeType>
+      </li>
+    </comps>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaper_Regular</defName>
+    <label>Make Vaper (Regular)</label>
+    <description>Make Smokeleaf Vaper (Regular).</description>
+    <jobString>Making Smokeleaf Vaper.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>100</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperEmpty</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperRefillRegular</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSVaperEmpty</li>
+        <li>SSVaperRefillRegular</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperRegular>1</SSVaperRegular>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <ThingDef ParentName="SSVaperRefillBase">
+    <defName>SSVaperRefillRegular</defName>
+    <label>Vaper Refill (Regular)</label>
+    <description>A cartridge used to refill vapers. This cartridge is filled with regular vape fluid.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSVaperRefill/SSVaperRefillRegular</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>661.9</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaperRefillRegular</defName>
+    <label>Make Vaper Refill (Regular)</label>
+    <description>Make 1 Smokeleaf Vaper refill (Regular).</description>
+    <jobString>Making Smokeleaf Vaper refill.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperRefillRegular>1</SSVaperRefillRegular>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- Fruity -->
+  <ThingDef ParentName="SSVaperBase">
+    <defName>SSVaperFruity</defName>
+    <label>Vaper (Fruity)</label>
+    <description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive fruity flavour. Effects last about half a day.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/SSVaper/SSVaperFruity/SSVaperFruity</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use Vaper (Fruity)</useLabel>
+        <useDuration>350</useDuration>
+      </li>
+      <li Class="SSVapes.CompProperties_SSVapeUses">
+        <SSVapeUses>20</SSVapeUses>
+        <SSVapeType>fruity</SSVapeType>
+      </li>
+    </comps>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaper_Fruity</defName>
+    <label>Make Vaper (Fruity)</label>
+    <description>Make Smokeleaf Vaper (Fruity).</description>
+    <jobString>Making Smokeleaf Vaper.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>100</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperEmpty</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperRefillFruity</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSVaperEmpty</li>
+        <li>SSVaperRefillFruity</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperFruity>1</SSVaperFruity>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <ThingDef ParentName="SSVaperRefillBase">
+    <defName>SSVaperRefillFruity</defName>
+    <label>Vaper Refill (Fruity)</label>
+    <description>A cartridge used to refill vapers. This cartridge is filled with fruity vape fluid.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSVaperRefill/SSVaperRefillFruity</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>701.9</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaperRefillFruity</defName>
+    <label>Make Vaper Refill (Fruity)</label>
+    <description>Make 1 Smokeleaf Vaper refill (Fruity).</description>
+    <jobString>Making Smokeleaf Vaper refill.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+            <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperRefillFruity>1</SSVaperRefillFruity>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <!-- Menthol -->
+  <ThingDef ParentName="SSVaperBase">
+    <defName>SSVaperMenthol</defName>
+    <label>Vaper (Menthol)</label>
+    <description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive minty flavour. Effects last about half a day.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/SSVaper/SSVaperMenthol/SSVaperMenthol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use Vaper (Menthol)</useLabel>
+        <useDuration>350</useDuration>
+      </li>
+      <li Class="SSVapes.CompProperties_SSVapeUses">
+        <SSVapeUses>20</SSVapeUses>
+        <SSVapeType>menthol</SSVapeType>
+      </li>
+    </comps>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaper_Menthol</defName>
+    <label>Make Vaper (Menthol)</label>
+    <description>Make Smokeleaf Vaper (Menthol).</description>
+    <jobString>Making Smokeleaf Vaper.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>100</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperEmpty</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSVaperRefillMenthol</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SSVaperEmpty</li>
+        <li>SSVaperRefillMenthol</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperMenthol>1</SSVaperMenthol>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+  <ThingDef ParentName="SSVaperRefillBase">
+    <defName>SSVaperRefillMenthol</defName>
+    <label>Vaper Refill (Menthol)</label>
+    <description>A cartridge used to refill vapers. This cartridge is filled with menthol vape fluid.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SSVaperRefill/SSVaperRefillMenthol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>697.9</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories Inherit="false">
+      <li>SSDrugs</li>
+    </thingCategories>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeSSVaperRefillMenthol</defName>
+    <label>Make Vaper Refill (Menthol)</label>
+    <description>Make 1 Smokeleaf Vaper refill (Menthol).</description>
+    <jobString>Making Smokeleaf Vaper refill.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Intellectual</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSGlycerol</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SSMintLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+        <li>Steel</li>
+        <li>MSGlycerol</li>
+        <li>SSMintLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SSVaperRefillMenthol>1</SSVaperRefillMenthol>
+    </products>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Intellectual>6</Intellectual>
+    </skillRequirements>
+    <researchPrerequisite>SSVape</researchPrerequisite>
+  </RecipeDef>
+</Defs>

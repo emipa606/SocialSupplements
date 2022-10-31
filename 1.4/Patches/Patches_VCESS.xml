@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ====== Compatability Patch ==================== -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter/thingDefs</xpath>
+            <value>
+              <li>VCE_RawSugar</li>
+              <li>VCE_AgaveNectar</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/ingredients/li[2]/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>VCE_RawSugar</li>
+                <li>VCE_AgaveNectar</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>VCE_RawSugar</li>
+              <li>VCE_AgaveNectar</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="MakeSSGlucose"]/fixedIngredientFilter</xpath>
+            <value>
+              <thingDefs>
+                <li>VCE_RawSugar</li>
+                <li>VCE_AgaveNectar</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
