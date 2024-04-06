@@ -4,50 +4,46 @@ namespace SSVapes;
 
 internal class SSHediffEffecter
 {
-    internal static bool HediffEffect(HediffDef hediffdef, float SeverityToApply, Pawn pawn, BodyPartRecord part,
-        out bool immune)
+    internal static bool HediffEffect(HediffDef hediffdef, float SeverityToApply, Pawn pawn, BodyPartRecord part)
     {
-        immune = false;
         if (pawn.RaceProps.IsMechanoid || hediffdef == null)
         {
             return false;
         }
 
-        if (!ImmuneTo(pawn, hediffdef))
+        if (ImmuneTo(pawn, hediffdef))
         {
-            if (pawn.health.WouldDieAfterAddingHediff(hediffdef, part, SeverityToApply))
-            {
-                return false;
-            }
+            return false;
+        }
 
-            var health = pawn.health;
-            Hediff hediff;
-            if (health == null)
-            {
-                hediff = null;
-            }
-            else
-            {
-                var hediffSet = health.hediffSet;
-                hediff = hediffSet?.GetFirstHediffOfDef(hediffdef);
-            }
+        if (pawn.health.WouldDieAfterAddingHediff(hediffdef, part, SeverityToApply))
+        {
+            return false;
+        }
 
-            var hashediff = hediff;
-            if (hashediff != null)
-            {
-                hashediff.Severity += SeverityToApply;
-                return true;
-            }
+        var health = pawn.health;
+        Hediff hediff;
+        if (health == null)
+        {
+            hediff = null;
+        }
+        else
+        {
+            var hediffSet = health.hediffSet;
+            hediff = hediffSet?.GetFirstHediffOfDef(hediffdef);
+        }
 
-            var addhediff = HediffMaker.MakeHediff(hediffdef, pawn, part);
-            addhediff.Severity = SeverityToApply;
-            pawn.health.AddHediff(addhediff, part);
+        var hashediff = hediff;
+        if (hashediff != null)
+        {
+            hashediff.Severity += SeverityToApply;
             return true;
         }
 
-        immune = true;
-
-        return false;
+        var addhediff = HediffMaker.MakeHediff(hediffdef, pawn, part);
+        addhediff.Severity = SeverityToApply;
+        pawn.health.AddHediff(addhediff, part);
+        return true;
     }
 
     internal static bool ImmuneTo(Pawn pawn, HediffDef def)

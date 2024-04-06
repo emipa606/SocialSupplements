@@ -36,13 +36,13 @@ public class SSVapeUtility
         }
 
         var SeverityToApply = 0.5f;
-        if (SSHediffEffecter.HediffEffect(hediffdef, SeverityToApply, p, null, out _))
+        if (SSHediffEffecter.HediffEffect(hediffdef, SeverityToApply, p, null))
         {
             var SLTol = DefDatabase<HediffDef>.GetNamed("SmokeleafTolerance");
             if (SLTol != null)
             {
                 var Sev = 0.02f / p.BodySize;
-                SSHediffEffecter.HediffEffect(SLTol, Sev, p, null, out _);
+                SSHediffEffecter.HediffEffect(SLTol, Sev, p, null);
             }
 
             if (p.RaceProps.IsFlesh)
@@ -73,8 +73,8 @@ public class SSVapeUtility
                     if (need != null)
                     {
                         var effect = 1f;
-                        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(p, SLChemDef,
-                            ref effect);
+                        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(p, SLChemDef,
+                            ref effect, true);
                         need.CurLevel += effect;
                     }
                 }
@@ -85,7 +85,7 @@ public class SSVapeUtility
         if (need2 != null)
         {
             var effect2 = -0.1f;
-            AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(p, SLChemDef, ref effect2);
+            AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(p, SLChemDef, ref effect2, true);
             need2.CurLevel += effect2;
         }
 
@@ -160,7 +160,7 @@ public class SSVapeUtility
             return;
         }
 
-        if (!(vape is SSVapeData data))
+        if (vape is not SSVapeData data)
         {
             Passed = false;
             Reason = "SSVapes.NotAVaper".Translate(vape.Label.CapitalizeFirst());

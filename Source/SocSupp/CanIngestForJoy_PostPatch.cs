@@ -9,7 +9,7 @@ public class CanIngestForJoy_PostPatch
 {
     [HarmonyPostfix]
     [HarmonyPriority(0)]
-    public static void PostFix(ref bool __result, Pawn pawn, Thing t)
+    public static void PostFix(ref bool __result, Thing t)
     {
         if (!__result)
         {

@@ -4,7 +4,7 @@ namespace SSVapes;
 
 public class CompProperties_SSVapeUses : CompProperties
 {
-    public string SSVapeType = "empty";
+    public readonly string SSVapeType = "empty";
 
     public int SSVapeUses;
 

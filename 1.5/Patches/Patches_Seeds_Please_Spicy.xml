@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Chili -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>SeedsPlease</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <SeedsPlease.SeedDef ParentName="SeedBase">
+              <defName>Seed_SSChilli</defName>
+              <label>Chilli seeds</label>
+              <sources>
+                <li>Plant_SSChilli</li>
+              </sources>
+            </SeedsPlease.SeedDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef ParentName="ExtractSeed">
+              <defName>ExtractSeed_SSChilli</defName>
+              <label>extract chilli seeds</label>
+              <description>Prepares useful seeds from chilli peppers.</description>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>SSChilliPeppers</li>
+                    </thingDefs>
+                  </filter>
+                  <count>7</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>SSChilliPeppers</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <products>
+                <Seed_SSChilli>7</Seed_SSChilli>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

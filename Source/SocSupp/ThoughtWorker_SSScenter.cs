@@ -5,7 +5,7 @@ namespace SSScent;
 
 public class ThoughtWorker_SSScenter : ThoughtWorker
 {
-    public HediffDef SSHedCheckNeutral = HediffDefSSScents.HedSSScentNeutral;
+    public readonly HediffDef SSHedCheckNeutral = HediffDefSSScents.HedSSScentNeutral;
 
     protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
     {
@@ -30,12 +30,7 @@ public class ThoughtWorker_SSScenter : ThoughtWorker
             SShedneutral = hedSet?.GetFirstHediffOfDef(SSHedCheckNeutral);
         }
 
-        if (SShedneutral is not { Visible: true })
-        {
-            return false;
-        }
-
-        return ThoughtState.ActiveAtStage(0);
+        return SShedneutral is not { Visible: true } ? false : ThoughtState.ActiveAtStage(0);
     }
 
     [DefOf]

@@ -16,9 +16,8 @@ public class CompUseEffect_SSVape : CompUseEffect
         }
     }
 
-    public override bool CanBeUsedBy(Pawn p, out string failReason)
+    public override AcceptanceReport CanBeUsedBy(Pawn p)
     {
-        failReason = null;
         if (parent.def != SSVapeDefOf.ThingDefOf.SSVaperRegular &&
             parent.def != SSVapeDefOf.ThingDefOf.SSVaperMenthol &&
             parent.def != SSVapeDefOf.ThingDefOf.SSVaperFruity && parent.def != SSVapeDefOf.ThingDefOf.SSVaperEmpty)
@@ -32,7 +31,6 @@ public class CompUseEffect_SSVape : CompUseEffect
             return true;
         }
 
-        failReason = Reason;
-        return false;
+        return Reason;
     }
 }
