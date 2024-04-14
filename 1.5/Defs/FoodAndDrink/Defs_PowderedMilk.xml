@@ -79,7 +79,7 @@
   </RecipeDef>
   <RecipeDef>
     <defName>MakeMilkFromSSMilkPowder</defName>
-    <label>Make Milk from powedered milk.</label>
+    <label>Make Milk from powdered milk.</label>
     <description>Make 50 Milk.</description>
     <jobString>Reconstituting Milk.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
