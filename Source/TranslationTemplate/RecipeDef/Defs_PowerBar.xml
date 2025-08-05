@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Power Bar in bulk -->
+  <MakeBulkSSPowerBar.label>Make Power Bar in bulk</MakeBulkSSPowerBar.label>
+  <!-- EN: Prepare 5 Power Bars. -->
+  <MakeBulkSSPowerBar.description>Prepare 5 Power Bars.</MakeBulkSSPowerBar.description>
+  <!-- EN: Preparing Power Bars. -->
+  <MakeBulkSSPowerBar.jobString>Preparing Power Bars.</MakeBulkSSPowerBar.jobString>
+  <!-- EN: Make Power Bar -->
+  <MakeSSPowerBar.label>Make Power Bar</MakeSSPowerBar.label>
+  <!-- EN: Prepare 1 Power Bar. -->
+  <MakeSSPowerBar.description>Prepare 1 Power Bar.</MakeSSPowerBar.description>
+  <!-- EN: Preparing Power Bar. -->
+  <MakeSSPowerBar.jobString>Preparing Power Bar.</MakeSSPowerBar.jobString>
+</LanguageData>

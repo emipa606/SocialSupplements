@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: ate candy cane -->
+  <AteSSCandyCane.stages.ate_candy_cane.label>ate candy cane</AteSSCandyCane.stages.ate_candy_cane.label>
+  <!-- EN: Eating candy cane always reminds me of my youth -->
+  <AteSSCandyCane.stages.ate_candy_cane.description>Eating candy cane always reminds me of my youth</AteSSCandyCane.stages.ate_candy_cane.description>
+  <!-- EN: ate mint chocolate -->
+  <AteSSMintChocolate.stages.ate_mint_chocolate.label>ate mint chocolate</AteSSMintChocolate.stages.ate_mint_chocolate.label>
+  <!-- EN: Mint chocolate is so scrumy -->
+  <AteSSMintChocolate.stages.ate_mint_chocolate.description>Mint chocolate is so scrumy</AteSSMintChocolate.stages.ate_mint_chocolate.description>
+  <!-- EN: Mint Tea -->
+  <SSMintTea_Thought.stages.Mint_Tea.label>Mint Tea</SSMintTea_Thought.stages.Mint_Tea.label>
+  <!-- EN: feeling refreshed -->
+  <SSMintTea_Thought.stages.Mint_Tea.description>feeling refreshed</SSMintTea_Thought.stages.Mint_Tea.description>
+</LanguageData>

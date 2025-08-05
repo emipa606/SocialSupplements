@@ -5,11 +5,10 @@ using Verse;
 namespace SocSupp;
 
 [HarmonyPatch(typeof(JoyGiver_Ingest), "CanIngestForJoy")]
-public class CanIngestForJoy_PostPatch
+public class JoyGiver_Ingest_CanIngestForJoy
 {
-    [HarmonyPostfix]
     [HarmonyPriority(0)]
-    public static void PostFix(ref bool __result, Thing t)
+    public static void Postfix(ref bool __result, Thing t)
     {
         if (!__result)
         {

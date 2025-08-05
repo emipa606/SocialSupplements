@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: fruity smokeleaf vape -->
+  <SSVape_Fruity_Thought.stages.fruity_smokeleaf_vape.label>fruity smokeleaf vape</SSVape_Fruity_Thought.stages.fruity_smokeleaf_vape.label>
+  <!-- EN: I'm, like, stoned, man. -->
+  <SSVape_Fruity_Thought.stages.fruity_smokeleaf_vape.description>I'm, like, stoned, man.</SSVape_Fruity_Thought.stages.fruity_smokeleaf_vape.description>
+  <!-- EN: minty smokeleaf vape -->
+  <SSVape_Menthol_Thought.stages.minty_smokeleaf_vape.label>minty smokeleaf vape</SSVape_Menthol_Thought.stages.minty_smokeleaf_vape.label>
+  <!-- EN: I'm, like, stoned, man. -->
+  <SSVape_Menthol_Thought.stages.minty_smokeleaf_vape.description>I'm, like, stoned, man.</SSVape_Menthol_Thought.stages.minty_smokeleaf_vape.description>
+  <!-- EN: high on smokeleaf vape -->
+  <SSVape_Regular_Thought.stages.high_on_smokeleaf_vape.label>high on smokeleaf vape</SSVape_Regular_Thought.stages.high_on_smokeleaf_vape.label>
+  <!-- EN: I'm, like, stoned, man. -->
+  <SSVape_Regular_Thought.stages.high_on_smokeleaf_vape.description>I'm, like, stoned, man.</SSVape_Regular_Thought.stages.high_on_smokeleaf_vape.description>
+</LanguageData>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Vaper (Empty) -->
+  <MakeSSVaper_Empty.label>Make Vaper (Empty)</MakeSSVaper_Empty.label>
+  <!-- EN: Make Smokeleaf Vaper (Empty). -->
+  <MakeSSVaper_Empty.description>Make Smokeleaf Vaper (Empty).</MakeSSVaper_Empty.description>
+  <!-- EN: Making Smokeleaf Vaper. -->
+  <MakeSSVaper_Empty.jobString>Making Smokeleaf Vaper.</MakeSSVaper_Empty.jobString>
+  <!-- EN: Make Vaper (Fruity) -->
+  <MakeSSVaper_Fruity.label>Make Vaper (Fruity)</MakeSSVaper_Fruity.label>
+  <!-- EN: Make Smokeleaf Vaper (Fruity). -->
+  <MakeSSVaper_Fruity.description>Make Smokeleaf Vaper (Fruity).</MakeSSVaper_Fruity.description>
+  <!-- EN: Making Smokeleaf Vaper. -->
+  <MakeSSVaper_Fruity.jobString>Making Smokeleaf Vaper.</MakeSSVaper_Fruity.jobString>
+  <!-- EN: Make Vaper (Menthol) -->
+  <MakeSSVaper_Menthol.label>Make Vaper (Menthol)</MakeSSVaper_Menthol.label>
+  <!-- EN: Make Smokeleaf Vaper (Menthol). -->
+  <MakeSSVaper_Menthol.description>Make Smokeleaf Vaper (Menthol).</MakeSSVaper_Menthol.description>
+  <!-- EN: Making Smokeleaf Vaper. -->
+  <MakeSSVaper_Menthol.jobString>Making Smokeleaf Vaper.</MakeSSVaper_Menthol.jobString>
+  <!-- EN: Make Vaper (Regular) -->
+  <MakeSSVaper_Regular.label>Make Vaper (Regular)</MakeSSVaper_Regular.label>
+  <!-- EN: Make Smokeleaf Vaper (Regular). -->
+  <MakeSSVaper_Regular.description>Make Smokeleaf Vaper (Regular).</MakeSSVaper_Regular.description>
+  <!-- EN: Making Smokeleaf Vaper. -->
+  <MakeSSVaper_Regular.jobString>Making Smokeleaf Vaper.</MakeSSVaper_Regular.jobString>
+  <!-- EN: Make Vaper Refill (Fruity) -->
+  <MakeSSVaperRefillFruity.label>Make Vaper Refill (Fruity)</MakeSSVaperRefillFruity.label>
+  <!-- EN: Make 1 Smokeleaf Vaper refill (Fruity). -->
+  <MakeSSVaperRefillFruity.description>Make 1 Smokeleaf Vaper refill (Fruity).</MakeSSVaperRefillFruity.description>
+  <!-- EN: Making Smokeleaf Vaper refill. -->
+  <MakeSSVaperRefillFruity.jobString>Making Smokeleaf Vaper refill.</MakeSSVaperRefillFruity.jobString>
+  <!-- EN: Make Vaper Refill (Menthol) -->
+  <MakeSSVaperRefillMenthol.label>Make Vaper Refill (Menthol)</MakeSSVaperRefillMenthol.label>
+  <!-- EN: Make 1 Smokeleaf Vaper refill (Menthol). -->
+  <MakeSSVaperRefillMenthol.description>Make 1 Smokeleaf Vaper refill (Menthol).</MakeSSVaperRefillMenthol.description>
+  <!-- EN: Making Smokeleaf Vaper refill. -->
+  <MakeSSVaperRefillMenthol.jobString>Making Smokeleaf Vaper refill.</MakeSSVaperRefillMenthol.jobString>
+  <!-- EN: Make Vaper Refill (Regular) -->
+  <MakeSSVaperRefillRegular.label>Make Vaper Refill (Regular)</MakeSSVaperRefillRegular.label>
+  <!-- EN: Make 1 Smokeleaf Vaper refill (Regular). -->
+  <MakeSSVaperRefillRegular.description>Make 1 Smokeleaf Vaper refill (Regular).</MakeSSVaperRefillRegular.description>
+  <!-- EN: Making Smokeleaf Vaper refill. -->
+  <MakeSSVaperRefillRegular.jobString>Making Smokeleaf Vaper refill.</MakeSSVaperRefillRegular.jobString>
+</LanguageData>

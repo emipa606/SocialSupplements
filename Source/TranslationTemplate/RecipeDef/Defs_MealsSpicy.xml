@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Spicy Fine Meals in bulk -->
+  <MakeBulkSSMealFineSpicy.label>Make Spicy Fine Meals in bulk</MakeBulkSSMealFineSpicy.label>
+  <!-- EN: Spice up 4 fine meals. -->
+  <MakeBulkSSMealFineSpicy.description>Spice up 4 fine meals.</MakeBulkSSMealFineSpicy.description>
+  <!-- EN: spicing up meals. -->
+  <MakeBulkSSMealFineSpicy.jobString>spicing up meals.</MakeBulkSSMealFineSpicy.jobString>
+  <!-- EN: Make Spicy Lavish Meals -->
+  <MakeBulkSSMealLavishSpicy.label>Make Spicy Lavish Meals</MakeBulkSSMealLavishSpicy.label>
+  <!-- EN: Spice up 4 lavish meals. -->
+  <MakeBulkSSMealLavishSpicy.description>Spice up 4 lavish meals.</MakeBulkSSMealLavishSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeBulkSSMealLavishSpicy.jobString>spicing up meal.</MakeBulkSSMealLavishSpicy.jobString>
+  <!-- EN: Make Spicy Simple Meal in bulk -->
+  <MakeBulkSSMealSimpleSpicy.label>Make Spicy Simple Meal in bulk</MakeBulkSSMealSimpleSpicy.label>
+  <!-- EN: Spice up 4 simple meals. -->
+  <MakeBulkSSMealSimpleSpicy.description>Spice up 4 simple meals.</MakeBulkSSMealSimpleSpicy.description>
+  <!-- EN: spicing up meals. -->
+  <MakeBulkSSMealSimpleSpicy.jobString>spicing up meals.</MakeBulkSSMealSimpleSpicy.jobString>
+  <!-- EN: Make Spicy Survival Meals in bulk -->
+  <MakeBulkSSMealSurvivalPackSpicy.label>Make Spicy Survival Meals in bulk</MakeBulkSSMealSurvivalPackSpicy.label>
+  <!-- EN: Spice up 4 survival meals. -->
+  <MakeBulkSSMealSurvivalPackSpicy.description>Spice up 4 survival meals.</MakeBulkSSMealSurvivalPackSpicy.description>
+  <!-- EN: spicing up meals. -->
+  <MakeBulkSSMealSurvivalPackSpicy.jobString>spicing up meals.</MakeBulkSSMealSurvivalPackSpicy.jobString>
+  <!-- EN: Make Spicy Travel Meals in bulk -->
+  <MakeBulkSSMealTravelPackSpicy.label>Make Spicy Travel Meals in bulk</MakeBulkSSMealTravelPackSpicy.label>
+  <!-- EN: Spice up 4 travel meals. -->
+  <MakeBulkSSMealTravelPackSpicy.description>Spice up 4 travel meals.</MakeBulkSSMealTravelPackSpicy.description>
+  <!-- EN: spicing up meals. -->
+  <MakeBulkSSMealTravelPackSpicy.jobString>spicing up meals.</MakeBulkSSMealTravelPackSpicy.jobString>
+  <!-- EN: Make Spicy Pemmican in bulk -->
+  <MakeBulkSSPemmicanSpicy.label>Make Spicy Pemmican in bulk</MakeBulkSSPemmicanSpicy.label>
+  <!-- EN: Spice up 25 pemmican. -->
+  <MakeBulkSSPemmicanSpicy.description>Spice up 25 pemmican.</MakeBulkSSPemmicanSpicy.description>
+  <!-- EN: spicing up pemmican. -->
+  <MakeBulkSSPemmicanSpicy.jobString>spicing up pemmican.</MakeBulkSSPemmicanSpicy.jobString>
+  <!-- EN: Make Spicy Fine Meal -->
+  <MakeSSMealFineSpicy.label>Make Spicy Fine Meal</MakeSSMealFineSpicy.label>
+  <!-- EN: Spice up a fine meal. -->
+  <MakeSSMealFineSpicy.description>Spice up a fine meal.</MakeSSMealFineSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeSSMealFineSpicy.jobString>spicing up meal.</MakeSSMealFineSpicy.jobString>
+  <!-- EN: Make Spicy Lavish Meal -->
+  <MakeSSMealLavishSpicy.label>Make Spicy Lavish Meal</MakeSSMealLavishSpicy.label>
+  <!-- EN: Spice up a lavish meal. -->
+  <MakeSSMealLavishSpicy.description>Spice up a lavish meal.</MakeSSMealLavishSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeSSMealLavishSpicy.jobString>spicing up meal.</MakeSSMealLavishSpicy.jobString>
+  <!-- EN: Make Spicy Simple Meal -->
+  <MakeSSMealSimpleSpicy.label>Make Spicy Simple Meal</MakeSSMealSimpleSpicy.label>
+  <!-- EN: Spice up a simple meal. -->
+  <MakeSSMealSimpleSpicy.description>Spice up a simple meal.</MakeSSMealSimpleSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeSSMealSimpleSpicy.jobString>spicing up meal.</MakeSSMealSimpleSpicy.jobString>
+  <!-- EN: Make Spicy Survival Meal -->
+  <MakeSSMealSurvivalPackSpicy.label>Make Spicy Survival Meal</MakeSSMealSurvivalPackSpicy.label>
+  <!-- EN: Spice up a survival meal. -->
+  <MakeSSMealSurvivalPackSpicy.description>Spice up a survival meal.</MakeSSMealSurvivalPackSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeSSMealSurvivalPackSpicy.jobString>spicing up meal.</MakeSSMealSurvivalPackSpicy.jobString>
+  <!-- EN: Make Spicy Travel Meal -->
+  <MakeSSMealTravelPackSpicy.label>Make Spicy Travel Meal</MakeSSMealTravelPackSpicy.label>
+  <!-- EN: Spice up a travel meal. -->
+  <MakeSSMealTravelPackSpicy.description>Spice up a travel meal.</MakeSSMealTravelPackSpicy.description>
+  <!-- EN: spicing up meal. -->
+  <MakeSSMealTravelPackSpicy.jobString>spicing up meal.</MakeSSMealTravelPackSpicy.jobString>
+  <!-- EN: Make Spicy Pemmican -->
+  <MakeSSPemmicanSpicy.label>Make Spicy Pemmican</MakeSSPemmicanSpicy.label>
+  <!-- EN: Spice up 5 pemmican. -->
+  <MakeSSPemmicanSpicy.description>Spice up 5 pemmican.</MakeSSPemmicanSpicy.description>
+  <!-- EN: spicing up pemmican. -->
+  <MakeSSPemmicanSpicy.jobString>spicing up pemmican.</MakeSSPemmicanSpicy.jobString>
+</LanguageData>

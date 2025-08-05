@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Vape (Fruity) in bulk -->
+  <MakeBulkSSVape_Fruity.label>Make Vape (Fruity) in bulk</MakeBulkSSVape_Fruity.label>
+  <!-- EN: Make 5 Smokeleaf Vapes (Fruity). -->
+  <MakeBulkSSVape_Fruity.description>Make 5 Smokeleaf Vapes (Fruity).</MakeBulkSSVape_Fruity.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeBulkSSVape_Fruity.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Fruity.jobString>
+  <!-- EN: Make Vape (Menthol) in bulk -->
+  <MakeBulkSSVape_Menthol.label>Make Vape (Menthol) in bulk</MakeBulkSSVape_Menthol.label>
+  <!-- EN: Make 5 Smokeleaf Vapes (Menthol). -->
+  <MakeBulkSSVape_Menthol.description>Make 5 Smokeleaf Vapes (Menthol).</MakeBulkSSVape_Menthol.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeBulkSSVape_Menthol.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Menthol.jobString>
+  <!-- EN: Make Vape (Regular) in bulk -->
+  <MakeBulkSSVape_Regular.label>Make Vape (Regular) in bulk</MakeBulkSSVape_Regular.label>
+  <!-- EN: Make 5 Smokeleaf Vapes (Regular). -->
+  <MakeBulkSSVape_Regular.description>Make 5 Smokeleaf Vapes (Regular).</MakeBulkSSVape_Regular.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeBulkSSVape_Regular.jobString>Making Smokeleaf Vape.</MakeBulkSSVape_Regular.jobString>
+  <!-- EN: Make Vape (Fruity) -->
+  <MakeSSVape_Fruity.label>Make Vape (Fruity)</MakeSSVape_Fruity.label>
+  <!-- EN: Make Smokeleaf Vape (Fruity). -->
+  <MakeSSVape_Fruity.description>Make Smokeleaf Vape (Fruity).</MakeSSVape_Fruity.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeSSVape_Fruity.jobString>Making Smokeleaf Vape.</MakeSSVape_Fruity.jobString>
+  <!-- EN: Make Vape (Menthol) -->
+  <MakeSSVape_Menthol.label>Make Vape (Menthol)</MakeSSVape_Menthol.label>
+  <!-- EN: Make 1 Smokeleaf Vape (Menthol). -->
+  <MakeSSVape_Menthol.description>Make 1 Smokeleaf Vape (Menthol).</MakeSSVape_Menthol.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeSSVape_Menthol.jobString>Making Smokeleaf Vape.</MakeSSVape_Menthol.jobString>
+  <!-- EN: Make Vape (Regular) -->
+  <MakeSSVape_Regular.label>Make Vape (Regular)</MakeSSVape_Regular.label>
+  <!-- EN: Make 1 Smokeleaf Vape (Regular). -->
+  <MakeSSVape_Regular.description>Make 1 Smokeleaf Vape (Regular).</MakeSSVape_Regular.description>
+  <!-- EN: Making Smokeleaf Vape. -->
+  <MakeSSVape_Regular.jobString>Making Smokeleaf Vape.</MakeSSVape_Regular.jobString>
+</LanguageData>

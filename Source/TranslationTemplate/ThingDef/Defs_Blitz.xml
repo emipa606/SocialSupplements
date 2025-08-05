@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Blitz (Ice) -->
+  <SSBlitz_Ice.label>Blitz (Ice)</SSBlitz_Ice.label>
+  <!-- EN: A psychoid infused and highly sweetened drink. This drink has a mint flavouring. Active for about half a day. -->
+  <SSBlitz_Ice.description>A psychoid infused and highly sweetened drink. This drink has a mint flavouring. Active for about half a day.</SSBlitz_Ice.description>
+  <!-- EN: Drink {0} -->
+  <SSBlitz_Ice.ingestible.ingestCommandString>Drink {0}</SSBlitz_Ice.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <SSBlitz_Ice.ingestible.ingestReportString>Drinking {0}.</SSBlitz_Ice.ingestible.ingestReportString>
+  <!-- EN: Blitz (Zest) -->
+  <SSBlitz_Zest.label>Blitz (Zest)</SSBlitz_Zest.label>
+  <!-- EN: A psychoid infused and highly sweetened drink. This drink has a fruit flavouring. Active for about half a day. -->
+  <SSBlitz_Zest.description>A psychoid infused and highly sweetened drink. This drink has a fruit flavouring. Active for about half a day.</SSBlitz_Zest.description>
+  <!-- EN: Drink {0} -->
+  <SSBlitz_Zest.ingestible.ingestCommandString>Drink {0}</SSBlitz_Zest.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <SSBlitz_Zest.ingestible.ingestReportString>Drinking {0}.</SSBlitz_Zest.ingestible.ingestReportString>
+</LanguageData>

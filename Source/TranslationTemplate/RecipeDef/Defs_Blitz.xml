@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Blitz (Ice) in bulk -->
+  <MakeBulkSSBlitz_Ice.label>Make Blitz (Ice) in bulk</MakeBulkSSBlitz_Ice.label>
+  <!-- EN: Prepare 5 Blitz (Ice). -->
+  <MakeBulkSSBlitz_Ice.description>Prepare 5 Blitz (Ice).</MakeBulkSSBlitz_Ice.description>
+  <!-- EN: Preparing Blitz. -->
+  <MakeBulkSSBlitz_Ice.jobString>Preparing Blitz.</MakeBulkSSBlitz_Ice.jobString>
+  <!-- EN: Make Blitz (Zest) in bulk -->
+  <MakeBulkSSBlitz_Zest.label>Make Blitz (Zest) in bulk</MakeBulkSSBlitz_Zest.label>
+  <!-- EN: Prepare 5 Blitz (Zest). -->
+  <MakeBulkSSBlitz_Zest.description>Prepare 5 Blitz (Zest).</MakeBulkSSBlitz_Zest.description>
+  <!-- EN: Preparing Blitz. -->
+  <MakeBulkSSBlitz_Zest.jobString>Preparing Blitz.</MakeBulkSSBlitz_Zest.jobString>
+  <!-- EN: Make Blitz (Zest) -->
+  <MakeSSBlitz_Zest.label>Make Blitz (Zest)</MakeSSBlitz_Zest.label>
+  <!-- EN: Prepare Blitz (Zest). -->
+  <MakeSSBlitz_Zest.description>Prepare Blitz (Zest).</MakeSSBlitz_Zest.description>
+  <!-- EN: Preparing Blitz. -->
+  <MakeSSBlitz_Zest.jobString>Preparing Blitz.</MakeSSBlitz_Zest.jobString>
+</LanguageData>

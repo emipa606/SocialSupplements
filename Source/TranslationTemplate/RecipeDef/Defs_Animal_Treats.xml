@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Animal Treats -->
+  <MakeSSAnimalTreats.label>Make Animal Treats</MakeSSAnimalTreats.label>
+  <!-- EN: Make 50 Animal Treats. -->
+  <MakeSSAnimalTreats.description>Make 50 Animal Treats.</MakeSSAnimalTreats.description>
+  <!-- EN: Making Animal Treats. -->
+  <MakeSSAnimalTreats.jobString>Making Animal Treats.</MakeSSAnimalTreats.jobString>
+</LanguageData>

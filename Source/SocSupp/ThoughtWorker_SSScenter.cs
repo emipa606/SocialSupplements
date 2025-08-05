@@ -5,7 +5,7 @@ namespace SSScent;
 
 public class ThoughtWorker_SSScenter : ThoughtWorker
 {
-    public readonly HediffDef SSHedCheckNeutral = HediffDefSSScents.HedSSScentNeutral;
+    private readonly HediffDef SSHedCheckNeutral = HediffDefSSScents.HedSSScentNeutral;
 
     protected override ThoughtState CurrentSocialStateInternal(Pawn pawn, Pawn other)
     {
@@ -34,7 +34,7 @@ public class ThoughtWorker_SSScenter : ThoughtWorker
     }
 
     [DefOf]
-    public static class HediffDefSSScents
+    private static class HediffDefSSScents
     {
         public static HediffDef HedSSScentNeutral;
     }

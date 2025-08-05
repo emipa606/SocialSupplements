@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Vape (Fruity) -->
+  <SSVape_Fruity.label>Vape (Fruity)</SSVape_Fruity.label>
+  <!-- EN: Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive fruity flavour. Effects last about half a day. -->
+  <SSVape_Fruity.description>Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive fruity flavour. Effects last about half a day.</SSVape_Fruity.description>
+  <!-- EN: Smoke {0} -->
+  <SSVape_Fruity.ingestible.ingestCommandString>Smoke {0}</SSVape_Fruity.ingestible.ingestCommandString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Fruity.ingestible.ingestReportString>Vaping {0}.</SSVape_Fruity.ingestible.ingestReportString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Fruity.ingestible.ingestReportStringEat>Vaping {0}.</SSVape_Fruity.ingestible.ingestReportStringEat>
+  <!-- EN: Vape (Menthol) -->
+  <SSVape_Menthol.label>Vape (Menthol)</SSVape_Menthol.label>
+  <!-- EN: Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive minty flavour. Effects last about half a day. -->
+  <SSVape_Menthol.description>Device to allow vaping of smokeleaf. Less harsh than smoking smokeleaf joints. This vape has a distinctive minty flavour. Effects last about half a day.</SSVape_Menthol.description>
+  <!-- EN: Smoke {0} -->
+  <SSVape_Menthol.ingestible.ingestCommandString>Smoke {0}</SSVape_Menthol.ingestible.ingestCommandString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Menthol.ingestible.ingestReportString>Vaping {0}.</SSVape_Menthol.ingestible.ingestReportString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Menthol.ingestible.ingestReportStringEat>Vaping {0}.</SSVape_Menthol.ingestible.ingestReportStringEat>
+  <!-- EN: Vape (Regular) -->
+  <SSVape_Regular.label>Vape (Regular)</SSVape_Regular.label>
+  <!-- EN: Device to allow vaping of smokeleaf. It is slightly less harsh than a smokeleaf joint. Effects last about half a day. -->
+  <SSVape_Regular.description>Device to allow vaping of smokeleaf. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</SSVape_Regular.description>
+  <!-- EN: Smoke {0} -->
+  <SSVape_Regular.ingestible.ingestCommandString>Smoke {0}</SSVape_Regular.ingestible.ingestCommandString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Regular.ingestible.ingestReportString>Vaping {0}.</SSVape_Regular.ingestible.ingestReportString>
+  <!-- EN: Vaping {0}. -->
+  <SSVape_Regular.ingestible.ingestReportStringEat>Vaping {0}.</SSVape_Regular.ingestible.ingestReportStringEat>
+</LanguageData>

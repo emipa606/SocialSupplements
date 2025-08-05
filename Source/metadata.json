@@ -2,5 +2,14 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 23696,
+  "LinesOfXML": 260848,
+  "CodeBaseSize": 86,
+  "LastXmlCleaning": "2025-08-05T17:16:28.6688378+02:00",
+  "SocialImageSet": true,
+  "SearchTags": "mood alteration"
 }

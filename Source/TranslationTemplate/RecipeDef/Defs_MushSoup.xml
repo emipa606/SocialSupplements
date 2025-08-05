@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: cook 4 mushroom soup -->
+  <CookBulkSSMushSoup.label>cook 4 mushroom soup</CookBulkSSMushSoup.label>
+  <!-- EN: Cooks 4 creamy mushroom soup. -->
+  <CookBulkSSMushSoup.description>Cooks 4 creamy mushroom soup.</CookBulkSSMushSoup.description>
+  <!-- EN: Cooking mushroom soup. -->
+  <CookBulkSSMushSoup.jobString>Cooking mushroom soup.</CookBulkSSMushSoup.jobString>
+  <!-- EN: cook mushroom soup -->
+  <CookSSMushSoup.label>cook mushroom soup</CookSSMushSoup.label>
+  <!-- EN: Cooks creamy mushroom soup. -->
+  <CookSSMushSoup.description>Cooks creamy mushroom soup.</CookSSMushSoup.description>
+  <!-- EN: Cooking mushroom soup. -->
+  <CookSSMushSoup.jobString>Cooking mushroom soup.</CookSSMushSoup.jobString>
+</LanguageData>

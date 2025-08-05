@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make hot sauce in bulk -->
+  <MakeBulkSSHotSauce.label>Make hot sauce in bulk</MakeBulkSSHotSauce.label>
+  <!-- EN: Make 20 hot sauce. -->
+  <MakeBulkSSHotSauce.description>Make 20 hot sauce.</MakeBulkSSHotSauce.description>
+  <!-- EN: Making hot sauce. -->
+  <MakeBulkSSHotSauce.jobString>Making hot sauce.</MakeBulkSSHotSauce.jobString>
+  <!-- EN: Make hot sauce -->
+  <MakeSSHotSauce.label>Make hot sauce</MakeSSHotSauce.label>
+  <!-- EN: Make 5 hot sauce. -->
+  <MakeSSHotSauce.description>Make 5 hot sauce.</MakeSSHotSauce.description>
+  <!-- EN: Making hot sauce. -->
+  <MakeSSHotSauce.jobString>Making hot sauce.</MakeSSHotSauce.jobString>
+</LanguageData>

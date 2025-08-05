@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Candy cane in bulk -->
+  <MakeBulkSSCandyCane.label>Make Candy cane in bulk</MakeBulkSSCandyCane.label>
+  <!-- EN: Preparing 5 candy cane. -->
+  <MakeBulkSSCandyCane.description>Preparing 5 candy cane.</MakeBulkSSCandyCane.description>
+  <!-- EN: Preparing candy cane. -->
+  <MakeBulkSSCandyCane.jobString>Preparing candy cane.</MakeBulkSSCandyCane.jobString>
+  <!-- EN: Make Mint Chocolate in bulk -->
+  <MakeBulkSSMintChocolate.label>Make Mint Chocolate in bulk</MakeBulkSSMintChocolate.label>
+  <!-- EN: Preparing 5 mint chocolates. -->
+  <MakeBulkSSMintChocolate.description>Preparing 5 mint chocolates.</MakeBulkSSMintChocolate.description>
+  <!-- EN: Preparing mint chocolate. -->
+  <MakeBulkSSMintChocolate.jobString>Preparing mint chocolate.</MakeBulkSSMintChocolate.jobString>
+  <!-- EN: Make Mint Tea in bulk -->
+  <MakeBulkSSMintTea.label>Make Mint Tea in bulk</MakeBulkSSMintTea.label>
+  <!-- EN: Steep 5 mint teas. -->
+  <MakeBulkSSMintTea.description>Steep 5 mint teas.</MakeBulkSSMintTea.description>
+  <!-- EN: Steeping mint tea. -->
+  <MakeBulkSSMintTea.jobString>Steeping mint tea.</MakeBulkSSMintTea.jobString>
+  <!-- EN: Make Candy cane -->
+  <MakeSSCandyCane.label>Make Candy cane</MakeSSCandyCane.label>
+  <!-- EN: Preparing candy cane. -->
+  <MakeSSCandyCane.description>Preparing candy cane.</MakeSSCandyCane.description>
+  <!-- EN: Preparing candy cane. -->
+  <MakeSSCandyCane.jobString>Preparing candy cane.</MakeSSCandyCane.jobString>
+  <!-- EN: Make Mint Chocolate -->
+  <MakeSSMintChocolate.label>Make Mint Chocolate</MakeSSMintChocolate.label>
+  <!-- EN: Preparing mint chocolate. -->
+  <MakeSSMintChocolate.description>Preparing mint chocolate.</MakeSSMintChocolate.description>
+  <!-- EN: Preparing mint chocolate. -->
+  <MakeSSMintChocolate.jobString>Preparing mint chocolate.</MakeSSMintChocolate.jobString>
+</LanguageData>

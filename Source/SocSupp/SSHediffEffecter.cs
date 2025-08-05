@@ -46,7 +46,7 @@ internal class SSHediffEffecter
         return true;
     }
 
-    internal static bool ImmuneTo(Pawn pawn, HediffDef def)
+    private static bool ImmuneTo(Pawn pawn, HediffDef def)
     {
         var hediffs = pawn.health.hediffSet.hediffs;
         foreach (var hediff in hediffs)

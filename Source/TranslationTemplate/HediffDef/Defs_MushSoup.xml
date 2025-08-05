@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Ate mushroom soup -->
+  <HedSSMushSoup.label>Ate mushroom soup</HedSSMushSoup.label>
+  <!-- EN: Mushroom soup effect -->
+  <HedSSMushSoup.description>Mushroom soup effect</HedSSMushSoup.description>
+  <!-- EN: Mushroom Soup -->
+  <HedSSMushSoup.stages.Mushroom_Soup.label>Mushroom Soup</HedSSMushSoup.stages.Mushroom_Soup.label>
+</LanguageData>

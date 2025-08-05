@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: fruity smokeleaf vape -->
+  <SSVape_Fruity_High.label>fruity smokeleaf vape</SSVape_Fruity_High.label>
+  <!-- EN: fruity smokeleaf vape effect -->
+  <SSVape_Fruity_High.description>fruity smokeleaf vape effect</SSVape_Fruity_High.description>
+  <!-- EN: a smokeleaf vape high -->
+  <SSVape_Fruity_High.labelNoun>a smokeleaf vape high</SSVape_Fruity_High.labelNoun>
+  <!-- EN: menthol smokeleaf vape -->
+  <SSVape_Menthol_High.label>menthol smokeleaf vape</SSVape_Menthol_High.label>
+  <!-- EN: menthol smokeleaf vape effect -->
+  <SSVape_Menthol_High.description>menthol smokeleaf vape effect</SSVape_Menthol_High.description>
+  <!-- EN: a smokeleaf vape high -->
+  <SSVape_Menthol_High.labelNoun>a smokeleaf vape high</SSVape_Menthol_High.labelNoun>
+  <!-- EN: smokeleaf vape -->
+  <SSVape_Regular_High.label>smokeleaf vape</SSVape_Regular_High.label>
+  <!-- EN: smokeleaf vape effect -->
+  <SSVape_Regular_High.description>smokeleaf vape effect</SSVape_Regular_High.description>
+  <!-- EN: a smokeleaf vape high -->
+  <SSVape_Regular_High.labelNoun>a smokeleaf vape high</SSVape_Regular_High.labelNoun>
+</LanguageData>

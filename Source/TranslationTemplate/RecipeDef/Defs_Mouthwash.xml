@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Mouthwash in bulk -->
+  <MakeBulkSSMouthWash.label>Make Mouthwash in bulk</MakeBulkSSMouthWash.label>
+  <!-- EN: Make 5 mouthwash. -->
+  <MakeBulkSSMouthWash.description>Make 5 mouthwash.</MakeBulkSSMouthWash.description>
+  <!-- EN: Making mouthwash. -->
+  <MakeBulkSSMouthWash.jobString>Making mouthwash.</MakeBulkSSMouthWash.jobString>
+</LanguageData>

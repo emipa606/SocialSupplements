@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Refreshed by Blitz (Ice) -->
+  <SSBlitz_Ice_High.label>Refreshed by Blitz (Ice)</SSBlitz_Ice_High.label>
+  <!-- EN: Blitz Ice effect -->
+  <SSBlitz_Ice_High.description>Blitz Ice effect</SSBlitz_Ice_High.description>
+  <!-- EN: a Blitz boost -->
+  <SSBlitz_Ice_High.labelNoun>a Blitz boost</SSBlitz_Ice_High.labelNoun>
+  <!-- EN: Refreshed by Blitz (Zest) -->
+  <SSBlitz_Zest_High.label>Refreshed by Blitz (Zest)</SSBlitz_Zest_High.label>
+  <!-- EN: Blitz Zest effect -->
+  <SSBlitz_Zest_High.description>Blitz Zest effect</SSBlitz_Zest_High.description>
+  <!-- EN: a Blitz boost -->
+  <SSBlitz_Zest_High.labelNoun>a Blitz boost</SSBlitz_Zest_High.labelNoun>
+</LanguageData>

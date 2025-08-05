@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Polyflower juice in bulk -->
+  <MakeBulkSSPolyflowerJuice.label>Make Polyflower juice in bulk</MakeBulkSSPolyflowerJuice.label>
+  <!-- EN: Prepare 5 polyflower juice. -->
+  <MakeBulkSSPolyflowerJuice.description>Prepare 5 polyflower juice.</MakeBulkSSPolyflowerJuice.description>
+  <!-- EN: Preparing polyflower juice. -->
+  <MakeBulkSSPolyflowerJuice.jobString>Preparing polyflower juice.</MakeBulkSSPolyflowerJuice.jobString>
+  <!-- EN: Make Polyflower juice -->
+  <MakeSSPolyflowerJuice.label>Make Polyflower juice</MakeSSPolyflowerJuice.label>
+  <!-- EN: Prepare polyflower juice. -->
+  <MakeSSPolyflowerJuice.description>Prepare polyflower juice.</MakeSSPolyflowerJuice.description>
+  <!-- EN: Preparing polyflower juice. -->
+  <MakeSSPolyflowerJuice.jobString>Preparing polyflower juice.</MakeSSPolyflowerJuice.jobString>
+</LanguageData>

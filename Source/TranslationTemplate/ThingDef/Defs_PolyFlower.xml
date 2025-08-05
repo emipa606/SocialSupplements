@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Polyflower -->
+  <Plant_SSPolyflower.label>Polyflower</Plant_SSPolyflower.label>
+  <!-- EN: A genetically modified flower that gives off numerous different scents. It was designed in this way to ensure that a pleasurable response can be had despite olfactory preferences. -->
+  <Plant_SSPolyflower.description>A genetically modified flower that gives off numerous different scents. It was designed in this way to ensure that a pleasurable response can be had despite olfactory preferences.</Plant_SSPolyflower.description>
+  <!-- EN: Polyflower Juice -->
+  <SSPolyflowerJuice.label>Polyflower Juice</SSPolyflowerJuice.label>
+  <!-- EN: A sweet tonic made from polyflowers and glycerol. It helps fulfils the need for recreation. -->
+  <SSPolyflowerJuice.description>A sweet tonic made from polyflowers and glycerol. It helps fulfils the need for recreation.</SSPolyflowerJuice.description>
+  <!-- EN: Drink {0} -->
+  <SSPolyflowerJuice.ingestible.ingestCommandString>Drink {0}</SSPolyflowerJuice.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <SSPolyflowerJuice.ingestible.ingestReportString>Drinking {0}.</SSPolyflowerJuice.ingestible.ingestReportString>
+  <!-- EN: Polyflower petals -->
+  <SSPolyPetals.label>Polyflower petals</SSPolyPetals.label>
+  <!-- EN: Picked petals of the polyflower. These petals can be used for various aromatic purposes. -->
+  <SSPolyPetals.description>Picked petals of the polyflower. These petals can be used for various aromatic purposes.</SSPolyPetals.description>
+</LanguageData>

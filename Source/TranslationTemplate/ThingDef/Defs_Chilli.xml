@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Cayenne Pepper Plant -->
+  <Plant_SSChilli.label>Cayenne Pepper Plant</Plant_SSChilli.label>
+  <!-- EN: A species of the plant genus Capsicum (peppers). This particular variety produces fruit with a medium pungency (spicy heat). -->
+  <Plant_SSChilli.description>A species of the plant genus Capsicum (peppers). This particular variety produces fruit with a medium pungency (spicy heat).</Plant_SSChilli.description>
+  <!-- EN: Cayenne Peppers -->
+  <SSChilliPeppers.label>Cayenne Peppers</SSChilliPeppers.label>
+  <!-- EN: Raw cayenne peppers. -->
+  <SSChilliPeppers.description>Raw cayenne peppers.</SSChilliPeppers.description>
+  <!-- EN: Hot Sauce -->
+  <SSHotSauce.label>Hot Sauce</SSHotSauce.label>
+  <!-- EN: A spicy hot sauce prepared from cayenne peppers. -->
+  <SSHotSauce.description>A spicy hot sauce prepared from cayenne peppers.</SSHotSauce.description>
+</LanguageData>

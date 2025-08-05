@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Vaper (Empty) -->
+  <SSVaperEmpty.label>Vaper (Empty)</SSVaperEmpty.label>
+  <!-- EN: Device to allow vaping of smokeleaf with a number of uses, though this is item is empty. It is slightly less harsh than a smokeleaf joint. Effects last about half a day. -->
+  <SSVaperEmpty.description>Device to allow vaping of smokeleaf with a number of uses, though this is item is empty. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</SSVaperEmpty.description>
+  <!-- EN: Vaper (Fruity) -->
+  <SSVaperFruity.label>Vaper (Fruity)</SSVaperFruity.label>
+  <!-- EN: Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive fruity flavour. Effects last about half a day. -->
+  <SSVaperFruity.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive fruity flavour. Effects last about half a day.</SSVaperFruity.description>
+  <!-- EN: Use Vaper (Fruity) -->
+  <SSVaperFruity.comps.CompUsable.useLabel>Use Vaper (Fruity)</SSVaperFruity.comps.CompUsable.useLabel>
+  <!-- EN: Vaper (Menthol) -->
+  <SSVaperMenthol.label>Vaper (Menthol)</SSVaperMenthol.label>
+  <!-- EN: Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive minty flavour. Effects last about half a day. -->
+  <SSVaperMenthol.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. This vape has a distinctive minty flavour. Effects last about half a day.</SSVaperMenthol.description>
+  <!-- EN: Use Vaper (Menthol) -->
+  <SSVaperMenthol.comps.CompUsable.useLabel>Use Vaper (Menthol)</SSVaperMenthol.comps.CompUsable.useLabel>
+  <!-- EN: Vaper Refill (Fruity) -->
+  <SSVaperRefillFruity.label>Vaper Refill (Fruity)</SSVaperRefillFruity.label>
+  <!-- EN: A cartridge used to refill vapers. This cartridge is filled with fruity vape fluid. -->
+  <SSVaperRefillFruity.description>A cartridge used to refill vapers. This cartridge is filled with fruity vape fluid.</SSVaperRefillFruity.description>
+  <!-- EN: Vaper Refill (Menthol) -->
+  <SSVaperRefillMenthol.label>Vaper Refill (Menthol)</SSVaperRefillMenthol.label>
+  <!-- EN: A cartridge used to refill vapers. This cartridge is filled with menthol vape fluid. -->
+  <SSVaperRefillMenthol.description>A cartridge used to refill vapers. This cartridge is filled with menthol vape fluid.</SSVaperRefillMenthol.description>
+  <!-- EN: Vaper Refill (Regular) -->
+  <SSVaperRefillRegular.label>Vaper Refill (Regular)</SSVaperRefillRegular.label>
+  <!-- EN: A cartridge used to refill vapers. This cartridge is filled with regular vape fluid. -->
+  <SSVaperRefillRegular.description>A cartridge used to refill vapers. This cartridge is filled with regular vape fluid.</SSVaperRefillRegular.description>
+  <!-- EN: Vaper (Regular) -->
+  <SSVaperRegular.label>Vaper (Regular)</SSVaperRegular.label>
+  <!-- EN: Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. Effects last about half a day. -->
+  <SSVaperRegular.description>Device to allow vaping of smokeleaf with a number of uses. It is slightly less harsh than a smokeleaf joint. Effects last about half a day.</SSVaperRegular.description>
+  <!-- EN: Use Vaper (Regular) -->
+  <SSVaperRegular.comps.CompUsable.useLabel>Use Vaper (Regular)</SSVaperRegular.comps.CompUsable.useLabel>
+</LanguageData>

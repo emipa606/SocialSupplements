@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Milk from powdered milk. -->
+  <MakeMilkFromSSMilkPowder.label>Make Milk from powdered milk.</MakeMilkFromSSMilkPowder.label>
+  <!-- EN: Make 50 Milk. -->
+  <MakeMilkFromSSMilkPowder.description>Make 50 Milk.</MakeMilkFromSSMilkPowder.description>
+  <!-- EN: Reconstituting Milk. -->
+  <MakeMilkFromSSMilkPowder.jobString>Reconstituting Milk.</MakeMilkFromSSMilkPowder.jobString>
+  <!-- EN: Make Powdered Milk -->
+  <MakeSSMilkPowder.label>Make Powdered Milk</MakeSSMilkPowder.label>
+  <!-- EN: Make 50 Powdered Milk. -->
+  <MakeSSMilkPowder.description>Make 50 Powdered Milk.</MakeSSMilkPowder.description>
+  <!-- EN: Making Powdered Milk. -->
+  <MakeSSMilkPowder.jobString>Making Powdered Milk.</MakeSSMilkPowder.jobString>
+</LanguageData>

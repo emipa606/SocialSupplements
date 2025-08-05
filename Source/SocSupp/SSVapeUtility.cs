@@ -67,13 +67,13 @@ public class SSVapeUtility
                     }
                 }
 
-                if (addictionHediffDef.causesNeed != null)
+                if (addictionHediffDef.chemicalNeed != null)
                 {
-                    var need = p.needs.AllNeeds.Find(x => x.def == addictionHediffDef.causesNeed);
+                    var need = p.needs.AllNeeds.Find(x => x.def == addictionHediffDef.chemicalNeed);
                     if (need != null)
                     {
                         var effect = 1f;
-                        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(p, SLChemDef,
+                        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(p, SLChemDef,
                             ref effect, true);
                         need.CurLevel += effect;
                     }
@@ -85,7 +85,7 @@ public class SSVapeUtility
         if (need2 != null)
         {
             var effect2 = -0.1f;
-            AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(p, SLChemDef, ref effect2, true);
+            AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(p, SLChemDef, ref effect2, true);
             need2.CurLevel += effect2;
         }
 
@@ -114,7 +114,7 @@ public class SSVapeUtility
                       (p.Rotation.FacingCell.ToVector3() * 0.21f) + BreathOffset;
             for (var i = 0; i < 4; i++)
             {
-                ThrowVapeBreathPuff(loc, p.Map, p.Rotation.AsAngle, p.Position.ToVector3());
+                ThrowVapeBreathPuff(loc, p.Map);
                 FleckMaker.ThrowSmoke(p.Position.ToVector3(), p.Map, 0.5f);
             }
         }
@@ -140,7 +140,7 @@ public class SSVapeUtility
         ((SSVapeData)newVapeThing).SSVapeUses = 0;
     }
 
-    public static void ThrowVapeBreathPuff(Vector3 loc, Map map, float throwAngle, Vector3 inheritVelocity)
+    private static void ThrowVapeBreathPuff(Vector3 loc, Map map)
     {
         if (loc.ToIntVec3().ShouldSpawnMotesAt(map) && !map.moteCounter.SaturatedLowPriority)
         {

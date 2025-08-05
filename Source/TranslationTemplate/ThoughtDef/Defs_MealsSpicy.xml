@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: ate spicy fine meal -->
+  <SSAteFineMealSpicy.stages.ate_spicy_fine_meal.label>ate spicy fine meal</SSAteFineMealSpicy.stages.ate_spicy_fine_meal.label>
+  <!-- EN: I ate a really tasty fine spicy meal. Yum! -->
+  <SSAteFineMealSpicy.stages.ate_spicy_fine_meal.description>I ate a really tasty fine spicy meal. Yum!</SSAteFineMealSpicy.stages.ate_spicy_fine_meal.description>
+  <!-- EN: ate spicy lavish meal -->
+  <SSAteLavishMealSpicy.stages.ate_spicy_lavish_meal.label>ate spicy lavish meal</SSAteLavishMealSpicy.stages.ate_spicy_lavish_meal.label>
+  <!-- EN: That spicy lavish meal was amazing. It nourished my body and my soul. -->
+  <SSAteLavishMealSpicy.stages.ate_spicy_lavish_meal.description>That spicy lavish meal was amazing. It nourished my body and my soul.</SSAteLavishMealSpicy.stages.ate_spicy_lavish_meal.description>
+  <!-- EN: ate spicy pemmican -->
+  <SSAtePemmicanSpicy.stages.ate_spicy_pemmican.label>ate spicy pemmican</SSAtePemmicanSpicy.stages.ate_spicy_pemmican.label>
+  <!-- EN: I ate spicy pemmican. -->
+  <SSAtePemmicanSpicy.stages.ate_spicy_pemmican.description>I ate spicy pemmican.</SSAtePemmicanSpicy.stages.ate_spicy_pemmican.description>
+  <!-- EN: ate spicy simple meal -->
+  <SSAteSimpleMealSpicy.stages.ate_spicy_simple_meal.label>ate spicy simple meal</SSAteSimpleMealSpicy.stages.ate_spicy_simple_meal.label>
+  <!-- EN: I ate a spicy meal. -->
+  <SSAteSimpleMealSpicy.stages.ate_spicy_simple_meal.description>I ate a spicy meal.</SSAteSimpleMealSpicy.stages.ate_spicy_simple_meal.description>
+  <!-- EN: ate spicy survival meal -->
+  <SSAteSurvivalMealSpicy.stages.ate_spicy_survival_meal.label>ate spicy survival meal</SSAteSurvivalMealSpicy.stages.ate_spicy_survival_meal.label>
+  <!-- EN: I ate a spicy survival meal. -->
+  <SSAteSurvivalMealSpicy.stages.ate_spicy_survival_meal.description>I ate a spicy survival meal.</SSAteSurvivalMealSpicy.stages.ate_spicy_survival_meal.description>
+  <!-- EN: ate spicy travel meal -->
+  <SSAteTravelMealSpicy.stages.ate_spicy_travel_meal.label>ate spicy travel meal</SSAteTravelMealSpicy.stages.ate_spicy_travel_meal.label>
+  <!-- EN: I ate a spicy travel meal. -->
+  <SSAteTravelMealSpicy.stages.ate_spicy_travel_meal.description>I ate a spicy travel meal.</SSAteTravelMealSpicy.stages.ate_spicy_travel_meal.description>
+</LanguageData>

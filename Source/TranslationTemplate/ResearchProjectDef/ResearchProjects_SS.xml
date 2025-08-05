@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Blitz Energy Drinks -->
+  <SSBlitz.label>Blitz Energy Drinks</SSBlitz.label>
+  <!-- EN: Grants the ability to make Blitz. -->
+  <SSBlitz.description>Grants the ability to make Blitz.</SSBlitz.description>
+  <!-- EN: Mouthwash -->
+  <SSMouthWash.label>Mouthwash</SSMouthWash.label>
+  <!-- EN: Grants the ability to make mouthwash. -->
+  <SSMouthWash.description>Grants the ability to make mouthwash.</SSMouthWash.description>
+  <!-- EN: Polyflower -->
+  <SSPolyflower.label>Polyflower</SSPolyflower.label>
+  <!-- EN: Grants the ability to plant the polyflower. -->
+  <SSPolyflower.description>Grants the ability to plant the polyflower.</SSPolyflower.description>
+  <!-- EN: Scenters -->
+  <SSScenters.label>Scenters</SSScenters.label>
+  <!-- EN: Grants the ability to make Scenters. -->
+  <SSScenters.description>Grants the ability to make Scenters.</SSScenters.description>
+  <!-- EN: Smokeleaf Vaping -->
+  <SSVape.label>Smokeleaf Vaping</SSVape.label>
+  <!-- EN: Grants the ability to make Smokeleaf Vapes. -->
+  <SSVape.description>Grants the ability to make Smokeleaf Vapes.</SSVape.description>
+</LanguageData>

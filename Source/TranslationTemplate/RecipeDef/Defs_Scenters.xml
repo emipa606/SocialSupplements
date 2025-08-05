@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make Scenters (Neutral) in bulk -->
+  <MakeBulkSSScenterNeutral.label>Make Scenters (Neutral) in bulk</MakeBulkSSScenterNeutral.label>
+  <!-- EN: Make 10 Scenters (Neutral). -->
+  <MakeBulkSSScenterNeutral.description>Make 10 Scenters (Neutral).</MakeBulkSSScenterNeutral.description>
+  <!-- EN: Making Scenters. -->
+  <MakeBulkSSScenterNeutral.jobString>Making Scenters.</MakeBulkSSScenterNeutral.jobString>
+  <!-- EN: Make Scenters (Neutral) -->
+  <MakeSSScenterNeutral.label>Make Scenters (Neutral)</MakeSSScenterNeutral.label>
+  <!-- EN: Make 2 Scenters (Neutral). -->
+  <MakeSSScenterNeutral.description>Make 2 Scenters (Neutral).</MakeSSScenterNeutral.description>
+  <!-- EN: Making Scenters. -->
+  <MakeSSScenterNeutral.jobString>Making Scenters.</MakeSSScenterNeutral.jobString>
+</LanguageData>
